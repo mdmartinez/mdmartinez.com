@@ -1,31 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import MyHeader from '../components/MyHeader';
+import '../css/index.css';
+import styled from 'react-emotion';
+import { Provider, Flex, Box } from 'rebass/emotion';
 
-import Header from '../components/header';
-
-import './index.css';
+const theme = {
+  fonts: {
+    sans: '"Avenir Next", "Fira Sans", Helvetica, sans-serif',
+  },
+};
 
 const Layout = ({ children, data }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        {
+          name: 'description',
+          content: 'Making light of the obvious and the ordinary',
+        },
+        {
+          name: 'keywords',
+          content: 'experience, human, obvious, ordinary, meaningful, fulfillment',
+        },
       ]}
     />
-    {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {/* {children()} */}
-    </div>
+    <Provider theme={theme} data={data}>
+      <MyHeader siteTitle={data.site.siteMetadata.title} />
+      {children()}
+    </Provider>
   </div>
 );
 
@@ -36,10 +42,31 @@ Layout.propTypes = {
 export default Layout;
 
 export const query = graphql`
-  query SiteTitleQuery {
+  query SiteTitleAndMarkdownQuery {
     site {
       siteMetadata {
         title
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+          }
+          fields {
+            route
+          }
+          timeToRead
+          tableOfContents
+          wordCount {
+            paragraphs
+            sentences
+            words
+          }
+          excerpt
+        }
       }
     }
   }

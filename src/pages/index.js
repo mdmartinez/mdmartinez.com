@@ -1,13 +1,15 @@
 import React from 'react';
-import Link from 'gatsby-link';
+
+import { Flex, Container, Box, Text } from 'rebass/emotion';
 
 const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
+  <Flex mt={5} flexWrap="wrap" justifyContent="center">
+    <Container w={0.5} fontSize={4}>
+      <Box>
+        <Text lineHeight={1.2}>Welcome</Text>
+      </Box>
+    </Container>
+  </Flex>
 );
 
 export default IndexPage;
