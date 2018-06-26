@@ -1,11 +1,11 @@
 import React from 'react';
-import GLink from 'gatsby-link';
-import { Flex, Box, Tabs, Tab as RTab } from 'rebass/emotion';
+import GLink, { navigateTo } from 'gatsby-link';
+import { Flex, Box, Tabs, Tab as RTab, Text, NavLink } from 'rebass/emotion';
 import styled from 'react-emotion';
 
-const Link = styled(GLink)({
-  color: 'white',
-  textDecoration: 'none',
+const NameText = styled(Text)({
+  cursor: 'pointer',
+  lineHeight: '1.1',
 });
 
 const Tab = styled(RTab)({
@@ -18,18 +18,29 @@ const Tab = styled(RTab)({
 });
 
 const MyHeader = () => (
-  <Flex mb={4}>
-    <Box width={1 / 2} px={4} py={5} fontSize={6} bg="hsla(210, 100%, 50%, 0.5)" color="white">
-      <Link to="/">Daniel Martinez</Link>
+  <Flex mb={4} alignContent="center">
+    <Box
+      width={[3 / 4, 1 / 2, 1 / 2]}
+      px={4}
+      py={[5, 5]}
+      fontSize={[5, 6]}
+      bg="hsla(210, 100%, 50%, 0.5)"
+      color="white"
+    >
+      <NameText onClick={() => navigateTo('/')}>Daniel Martinez</NameText>
     </Box>
-    <Box width={1 / 2} px={4} py={5} bg="hsla(210, 100%, 50%, 0.5)" color="white">
-      <Flex mx={-2} justifyContent="end">
+    <Box
+      width={[1 / 4, 1 / 2, 1 / 2]}
+      px={[0, 4]}
+      py={5}
+      bg="hsla(210, 100%, 50%, 0.5)"
+      color="white"
+    >
+      <Flex mx={-2} justifyContent="flex-end">
         <Tabs borderBottom={0}>
-          <Link to="/about">
-            <Tab fontSize={3} px={2}>
-              about
-            </Tab>
-          </Link>
+          <Tab onClick={() => navigateTo('/about')} fontWeight="normal" fontSize={3} px={2}>
+            about
+          </Tab>
         </Tabs>
       </Flex>
     </Box>
