@@ -7,7 +7,7 @@ const Container = styled(RContainer)({
 });
 
 const About = () => (
-  <Flex mt={5} flexWrap="wrap" justifyContent="center">
+  <Flex my={5} flexWrap="wrap" justifyContent="center">
     <Container w={0.6} fontSize={4}>
       <Box>
         <Text py={4} lineHeight={1.2}>
