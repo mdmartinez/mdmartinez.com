@@ -3,13 +3,24 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import MyHeader from '../components/MyHeader';
-import '../css/index.css';
+// import css from '../css/index.css';
 import styled from 'react-emotion';
 import { Provider, Flex, Box } from 'rebass/emotion';
 
 const theme = {
+  breakpoints: ['32em', '48em', '64em', '80em'],
   fonts: {
-    sans: '"Avenir Next", "Fira Sans", Helvetica, sans-serif',
+    default: '"Avenir Next LT Pro", "Fira Sans", sans-serif',
+    mono: 'Fira Code',
+    sofia: 'Sofia Pro Soft',
+    freight: 'FreightSans',
+  },
+  fontWeights: {
+    light: 300,
+  },
+  colors: {
+    lightBlue: 'hsla(210, 100%, 50%, 0.5)',
+    lightYellow: 'hsla(60, 100%, 80%, 0.8)',
   },
 };
 
