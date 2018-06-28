@@ -1,10 +1,10 @@
 import React from 'react';
 import { navigateTo } from 'gatsby-link';
-import { Row, Column, Border, Toolbar, NavLink } from 'rebass/emotion';
+import { Row, Column, Toolbar, NavLink, Text } from 'rebass/emotion';
 import styled from 'react-emotion';
 import { fontFamily } from 'styled-system';
 
-const NameText = styled(NavLink)(
+const Link = styled(NavLink)(
   {
     lineHeight: 1.2,
     fontWeight: 'normal',
@@ -12,12 +12,14 @@ const NameText = styled(NavLink)(
   fontFamily
 );
 
-const Link = styled(NavLink)(
+const LinkText = styled(Text)(
   {
+    paddingTop: 10,
+    paddingBottom: 10,
     transition: 'border-color 0.1s',
-    paddingBottom: 0,
-    lineHeight: 1.2,
-    borderBottom: '2px solid transparent',
+    borderWidth: '0px',
+    borderBottom: '2px solid',
+    borderColor: 'transparent',
     textTransform: 'capitalize',
     fontWeight: 'normal',
     '&:hover': {
@@ -31,7 +33,7 @@ const MyHeader = () => (
   <Row bg="lightBlue" py={'3em'}>
     <Column mb={0}>
       <Toolbar bg="transparent">
-        <NameText
+        <Link
           color="white"
           fontFamily="default"
           fontSize={[5, '40px', 6]}
@@ -39,8 +41,8 @@ const MyHeader = () => (
           onClick={() => navigateTo('/')}
         >
           Daniel Martinez
-        </NameText>
-        <Link
+        </Link>
+        <NavLink
           onClick={() => navigateTo('/about')}
           ml="auto"
           mr={2}
@@ -48,8 +50,8 @@ const MyHeader = () => (
           fontWeight="normal"
           fontSize={4}
         >
-          about
-        </Link>
+          <LinkText>about</LinkText>
+        </NavLink>
       </Toolbar>
     </Column>
   </Row>
