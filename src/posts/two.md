@@ -1,5 +1,5 @@
 ---
-title: Post One Placeholder
+title: Post Two Placeholder
 ---
 
 Content goes here.
