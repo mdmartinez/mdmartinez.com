@@ -17,8 +17,7 @@
     "react-helmet": "^5.2.0",
     "rebass": "^2.0.0",
     "recompose": "^0.27.1",
-    "styled-system": "^2.3.2",
-    "styles-debugger": "^1.0.0"
+    "styled-system": "^2.3.2"
   },
   "license": "MIT",
   "scripts": {
@@ -33,7 +32,8 @@
     "babel-plugin-emotion": "^9.2.4",
     "cz-conventional-changelog": "^2.1.0",
     "gatsby-plugin-remove-trailing-slashes": "^1.0.9",
-    "prettier": "^1.13.6"
+    "prettier": "^1.13.6",
+    "styles-debugger": "^1.0.0"
   },
   "repository": {
     "type": "git",
