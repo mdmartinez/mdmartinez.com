@@ -4,14 +4,13 @@ import { Row, Column, Toolbar, NavLink, Text } from 'rebass/emotion';
 import styled from 'react-emotion';
 
 const LinkText = styled(Text)({
-  paddingTop: 10,
+  paddingTop: 15,
   paddingBottom: 10,
   transition: 'border-color 0.1s',
   borderWidth: '0px',
   borderBottom: '2px solid',
   borderColor: 'transparent',
   textTransform: 'capitalize',
-  fontWeight: 'bold',
   '&:hover': {
     borderColor: 'lightYellow',
   },
