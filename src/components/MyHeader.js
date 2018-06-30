@@ -3,11 +3,6 @@ import { navigateTo } from 'gatsby-link';
 import { Row, Column, Toolbar, NavLink, Text } from 'rebass/emotion';
 import styled from 'react-emotion';
 
-const Link = styled(NavLink)({
-  lineHeight: 1.2,
-  fontWeight: 'normal',
-});
-
 const LinkText = styled(Text)({
   paddingTop: 10,
   paddingBottom: 10,
@@ -16,26 +11,20 @@ const LinkText = styled(Text)({
   borderBottom: '2px solid',
   borderColor: 'transparent',
   textTransform: 'capitalize',
-  fontWeight: 'normal',
+  fontWeight: 'bold',
   '&:hover': {
     borderColor: 'lightYellow',
   },
 });
 
 const MyHeader = () => (
-  <Row bg="lightBlue" py={'3em'} mb={2}>
+  <Row py={'3em'} mb={4} bg="lightBlue">
     <Column mb={0}>
       <Toolbar bg="transparent">
-        <Link color="white" fontSize={[5, '40px', 6]} pl={4} onClick={() => navigateTo('/')}>
+        <NavLink onClick={() => navigateTo('/')} pl={4} color="white" fontSize={[5, '40px', 6]}>
           Daniel Martinez
-        </Link>
-        <NavLink
-          onClick={() => navigateTo('/about')}
-          ml="auto"
-          mr={2}
-          fontWeight="normal"
-          fontSize={4}
-        >
+        </NavLink>
+        <NavLink onClick={() => navigateTo('/about')} ml="auto" mr={2} fontSize={4}>
           <LinkText>about</LinkText>
         </NavLink>
       </Toolbar>
