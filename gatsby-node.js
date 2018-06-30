@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
   return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve(`src/layouts/blogPost.js`);
+    const blogPostTemplate = path.resolve(`src/components/Post.js`);
     resolve(
       graphql(
         `
