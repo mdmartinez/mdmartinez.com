@@ -1,27 +1,29 @@
 import React from 'react';
-import { Flex, Container as RContainer, Box, Text } from 'rebass/emotion';
-import styled from 'react-emotion';
+import { Row, Column, Container, Box, Text } from 'rebass/emotion';
+import { withTheme } from 'emotion-theming';
 
-const Container = styled(RContainer)({
-  backgroundColor: 'hsla(44, 100%, 60%, 0.1)',
-});
-
-const About = () => (
-  <Flex my={5} flexWrap="wrap">
-    <Container fontSize={4}>
-      <Box>
-        <Text py={4} lineHeight={1.2}>
-          I'm Daniel, and this is my personal site.
-        </Text>
-        <Text py={2} lineHeight={1.2}>
-          I write about things that matter to me, and that I think others need to know.
-        </Text>
-        <Text py={4} lineHeight={1.2}>
-          Welcome.
-        </Text>
-      </Box>
-    </Container>
-  </Flex>
+const About = ({ theme }) => (
+  <Row>
+    <Column>
+      <Container
+        w={[3 / 4, theme.widths.default]}
+        fontSize={4}
+        css={{
+          backgroundColor: theme.colors.aboutPageYellow,
+          borderRadius: theme.radii[2],
+          boxShadow: theme.shadows[3],
+        }}
+      >
+        <Box>
+          <Text py={4}>I'm Daniel, and this is my personal site.</Text>
+          <Text py={2}>
+            I write about things that matter to me, and that I think others need to know.
+          </Text>
+          <Text py={4}>Welcome.</Text>
+        </Box>
+      </Container>
+    </Column>
+  </Row>
 );
 
-export default About;
+export default withTheme(About);
