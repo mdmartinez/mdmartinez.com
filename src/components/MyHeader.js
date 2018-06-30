@@ -4,7 +4,7 @@ import { Row, Column, Toolbar, NavLink, Text } from 'rebass/emotion';
 import styled from 'react-emotion';
 
 const LinkText = styled(Text)({
-  paddingTop: 15,
+  paddingTop: 17,
   paddingBottom: 10,
   transition: 'border-color 0.1s',
   borderWidth: '0px',
