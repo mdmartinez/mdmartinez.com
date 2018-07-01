@@ -4,8 +4,6 @@ import { Row, Column, Toolbar, NavLink, Text } from 'rebass/emotion';
 import styled from 'react-emotion';
 
 const LinkText = styled(Text)({
-  paddingTop: 17,
-  paddingBottom: 10,
   transition: 'border-color 0.1s',
   borderWidth: '0px',
   borderBottom: '2px solid',
@@ -24,7 +22,7 @@ const MyHeader = () => (
           Daniel Martinez
         </NavLink>
         <NavLink onClick={() => navigateTo('/about')} ml="auto" mr={2} fontSize={4}>
-          <LinkText>about</LinkText>
+          <LinkText pt={['7px', '10px']}>about</LinkText>
         </NavLink>
       </Toolbar>
     </Column>
