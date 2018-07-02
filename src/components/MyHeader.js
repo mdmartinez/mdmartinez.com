@@ -15,7 +15,7 @@ const LinkText = styled(Text)({
 });
 
 const MyHeader = () => (
-  <Row py={'3em'} mb={4} bg="blues.4">
+  <Row py={'3em'} mb={4} bg="blues.5">
     <Column mb={0}>
       <Toolbar bg="transparent">
         <NavLink onClick={() => navigateTo('/')} pl={4} color="white" fontSize={[5, '40px', 6]}>
