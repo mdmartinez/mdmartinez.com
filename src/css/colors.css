@@ -1,0 +1,128 @@
+.blues {
+    /* #4CCCFF */
+    color: hsla(197, 100%, 65%, 1);
+    /* #35AFE8 */
+    color: hsla(199, 80%, 56%, 1);
+    /* #2092D0 */
+    color: hsla(201, 73%, 47%, 1);
+    /* #0E76B7 */
+    color: hsla(203, 86%, 39%, 1);
+    /* #025B9D */
+    color: hsla(206, 97%, 31%, 1);
+    /* #004182  */
+    color: hsla(210, 100%, 25%, 1);
+}
+
+.oranges {
+    /* #FF7F4C */
+    color: hsla(17, 100%, 65%, 1);
+    /* #E1673D */
+    color: hsla(15, 73%, 56%, 1);
+    /* #C3502E */
+    color: hsla(14, 62%, 47%, 1);
+    /* #A5391F */
+    color: hsla(12, 68%, 38%, 1);
+    /* #882211 */
+    color: hsla(9, 78%, 30%, 1);
+    /* #6C0600 */
+    color: hsla(3, 100%, 21%, 1);
+}
+
+.blue-saturation-scale {
+    /* #EBF4F7 */
+    color: hsla(195, 43%, 95%, 1);
+    /* #E1EAED */
+    color: hsla(195, 25%, 91%, 1);
+    /* #91B2BF */
+    color: hsla(197, 26%, 66%, 1);
+    /* #7B9AA6 */
+    color: hsla(197, 19%, 57%, 1);
+    /* #536A73 */
+    color: hsla(197, 16%, 39%, 1);
+    /* #2D3A40 */
+    color: hsla(199, 17%, 21%, 1);
+}
+
+.orange-saturation-scale {
+    /* #F7EEEB */
+    color: hsla(15, 43%, 95%, 1);
+    /* #EDE5E1 */
+    color: hsla(20, 25%, 91%, 1);
+    /* #BF9E91 */
+    color: hsla(17, 26%, 66%, 1);
+    /* #A6877B */
+    color: hsla(17, 19%, 57%, 1);
+    /* #735C53 */
+    color: hsla(17, 16%, 39%, 1);
+    /* #40322D */
+    color: hsla(16, 17%, 21%, 1);
+}
+
+.blue-gray-scale {
+    /* #F2F6F7 */
+    color: hsla(192, 24%, 96%, 1);
+    /* #C3D5DE */
+    color: hsla(200, 29%, 82%, 1);
+    /* #99B7C4 */
+    color: hsla(198, 27%, 68%, 1);
+    /* #749AAB */
+    color: hsla(199, 25%, 56%, 1);
+    /* #547E91 */
+    color: hsla(199, 27%, 45%, 1);
+    /* #3A6478 */
+    color: hsla(199, 35%, 35%, 1);
+    /* #244C5E */
+    color: hsla(199, 45%, 25%, 1);
+    /* #133545 */
+    color: hsla(199, 57%, 17%, 1);
+    /* #08202B */
+    color: hsla(199, 69%, 10%, 1);
+    /* #010D12 */
+    color: hsla(198, 89%, 4%, 1);
+}
+
+.orange-gray-scale {
+    /* #F7F4F2 */
+    color: hsla(24, 24%, 96%, 1);
+    /* #DECAC3 */
+    color: hsla(16, 29%, 82%, 1);
+    /* #C4A499 */
+    color: hsla(15, 27%, 68%, 1);
+    /* #AB8274 */
+    color: hsla(15, 25%, 56%, 1);
+    /* #916454 */
+    color: hsla(16, 27%, 45%, 1);
+    /* #78493A */
+    color: hsla(15, 35%, 35%, 1);
+    /* #5E3224 */
+    color: hsla(14, 45%, 25%, 1);
+    /* #452013 */
+    color: hsla(16, 57%, 17%, 1);
+    /* #2B1108 */
+    color: hsla(15, 69%, 10%, 1);
+    /* #120601 */
+    color: hsla(18, 89%, 4%, 1);
+}
+
+.gray-scale {
+    /* #F2F2F2 */
+    color: hsla(0, 0%, 95%, 1);
+    /* #D9D9D9 */
+    color: hsla(0, 0%, 85%, 1);
+    /* #BFBFBF */
+    color: hsla(0, 0%, 75%, 1);
+    /* #A6A6A6 */
+    color: hsla(0, 0%, 65%, 1);
+    /* #8C8C8C */
+    color: hsla(0, 0%, 55%, 1);
+    /* #737373 */
+    color: hsla(0, 0%, 45%, 1);
+    /* #595959 */
+    color: hsla(0, 0%, 35%, 1);
+    /* #404040 */
+    color: hsla(0, 0%, 25%, 1);
+    /* #262626 */
+    color: hsla(0, 0%, 15%, 1);
+    /* #0D0D0D */
+    color: hsla(0, 0%, 5%, 1);
+}
