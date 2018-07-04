@@ -1,67 +1,9 @@
-const { createFilePath } = require(`gatsby-source-filesystem`);
-const path = require('path');
-require('events').EventEmitter.prototype._maxListeners = 0;
+// Useful for adding queriable data to nodes (like a URL path)
+exports.onCreateNode = require('./gatsby/onCreateNode');
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators;
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: 'posts' });
-    createNodeField({
-      node,
-      name: `route`,
-      value: `posts${slug}`,
-    });
-  }
-};
+// Everything regarding routes.
+// creates a routable path for a file by referencing a template. The template will populate dynamic data from GraphQL.
+exports.createPages = require('./gatsby/createPages');
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
-  return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve(`src/components/Post.js`);
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(limit: 1000) {
-              edges {
-                node {
-                  fields {
-                    route
-                  }
-                }
-              }
-            }
-          }
-        `
-      ).then(result => {
-        if (result.errors) {
-          reject(result.errors);
-        }
-
-        result.data.allMarkdownRemark.edges.forEach(edge => {
-          createPage({
-            path: `${edge.node.fields.route}`,
-            component: blogPostTemplate,
-            context: {
-              route: edge.node.fields.route,
-            },
-          });
-        });
-
-        return;
-      })
-    );
-  });
-};
-
-exports.onCreatePage = async ({ page, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
-
-  return new Promise(resolve => {
-    if (page.path.match(/^\/experiments/)) {
-      page.layout = 'experiments';
-      createPage(page);
-    }
-    resolve();
-  });
-};
+// Can modify page attributes, such as the layout. Default layout is layouts/index.js.
+exports.onCreatePage = require('./gatsby/onCreatePage');
