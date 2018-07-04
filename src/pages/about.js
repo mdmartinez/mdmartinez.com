@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Column, Container, Box, Text } from 'rebass/emotion';
 import { withTheme } from 'emotion-theming';
 
-const About = ({ theme }) => (
+const About = ({ data, theme }) => (
   <Row>
     <Column>
       <Container
@@ -14,12 +14,8 @@ const About = ({ theme }) => (
           boxShadow: theme.shadows[3],
         }}
       >
-        <Box>
-          <Text py={4}>I'm Daniel, and this is my personal site.</Text>
-          <Text py={2}>
-            I write about things that matter to me, and that I think others need to know.
-          </Text>
-          <Text py={4}>Welcome.</Text>
+        <Box py={3}>
+          <Text dangerouslySetInnerHTML={{ __html: data.aboutPage.html }} />
         </Box>
       </Container>
     </Column>
@@ -27,3 +23,14 @@ const About = ({ theme }) => (
 );
 
 export default withTheme(About);
+export const query = graphql`
+  query AboutPageQuery {
+    aboutPage: markdownRemark(fileAbsolutePath: { regex: "/pages/about/" }) {
+      html
+      frontmatter {
+        title
+        date
+      }
+    }
+  }
+`;
