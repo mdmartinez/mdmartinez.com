@@ -1,5 +1,6 @@
 ---
 title: A Note About This Place
+date: 2018-07-01
 ---
 
 This place is a memory of myself.

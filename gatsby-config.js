@@ -7,8 +7,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'src',
-        path: `${__dirname}/src/`,
+        name: 'content',
+        path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages`,
       },
     },
     'gatsby-transformer-remark',
@@ -21,6 +28,17 @@ module.exports = {
         hoist: true,
       },
     },
-    'gatsby-plugin-netlify',
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
+        allPageHeaders: ['cache-control: public, max-age=0, must-revalidate'], // option to add headers for all pages. `Link` headers are transformed by the below criteria
+        mergeSecurityHeaders: true, // boolean to turn off the default security headers
+        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
+        mergeCachingHeaders: true, // boolean to turn off the default caching headers
+        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
+        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
+      },
+    },
   ],
 };
