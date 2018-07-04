@@ -1,13 +1,9 @@
 const theme = {
   breakpoints: ['32em', '48em', '64em', '80em'],
   fonts: {
-    display: 'DIN Next Rounded LT',
+    display: '"DIN Next Rounded LT", "Helvetica Neue", system-ui, sans-serif',
     sans: '"Fira Sans", "Helvetica Neue", system-ui, sans-serif',
     mono: '"Fira Code", "SF Mono", "Roboto Mono", Menlo, monospace',
-    avenir: '"Avenir Next LT Pro"',
-    helvetica: 'Helvetica Neue',
-    heading: 'DINNextRoundedLTW01-Bol',
-    heading2: 'DINNextRoundedLTW01-Reg',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72, 96],
   lineHeights: [1.2, 1.3, 1.4, 1.5],
