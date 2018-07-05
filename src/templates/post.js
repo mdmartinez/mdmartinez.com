@@ -35,13 +35,13 @@ const Post = ({ data }) => {
     <div>
       <Row mt={-4} mb={4} py={5} className={bgGradient}>
         <Column />
-        <Column my={0} w={[3 / 4, theme.widths.default]}>
-          <Container w={3 / 4}>
+        <Column w={[49 / 50, theme.widths.default]} px={[0, 'auto']} my={0}>
+          <Container w={[49 / 50, 2 / 3]} px={0}>
             <Heading
               color={theme.colors.blueGrayScale[7]}
               mb={0}
-              ml={-4}
-              fontSize={[4, 6]}
+              ml={[0, -2]}
+              fontSize={[5, 6]}
               css={{ fontFamily: theme.fonts.display }}>
               {frontmatter.title}
             </Heading>
@@ -51,8 +51,8 @@ const Post = ({ data }) => {
       </Row>
       <Row>
         <Column />
-        <Column w={[3 / 4, theme.widths.default]}>
-          <Container w={3 / 4}>
+        <Column w={[39 / 40, theme.widths.default]}>
+          <Container w={[39 / 40, 2 / 3]} px={[0, 'auto']} mx={[0, 'auto']}>
             <Measure
               maxWidth={['48em']}
               fontSize={[3, '20px']}

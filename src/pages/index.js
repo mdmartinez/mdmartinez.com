@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 import { navigateTo } from 'gatsby-link';
 import { Row, Column, Container, Card, Heading } from 'rebass/emotion';
 import styled from 'react-emotion';
-import { withTheme } from 'emotion-theming';
+import theme from '../theme';
 
-const PostCard = styled(Card)(props => ({
+const PostCard = styled(Card)({
   fontSize: '20px',
   textTransform: 'capitalize',
   transition: 'box-shadow 0.1s, transform 0.1s',
   cursor: 'pointer',
   '&:hover': {
-    boxShadow: props.theme.cardShadow,
+    boxShadow: theme.cardShadow,
     transform: 'scale(1.01, 1.01)',
   },
-}));
+});
 
-const IndexPage = ({ data, theme }) => (
+const IndexPage = ({ data }) => (
   <Row>
     <Column>
       <Container w={[3 / 4, theme.widths.default]}>
@@ -27,13 +27,11 @@ const IndexPage = ({ data, theme }) => (
             boxShadow={3}
             borderRadius={2}
             key={blogPost.id}
-            onClick={() => navigateTo(blogPost.fields.slug)}
-          >
+            onClick={() => navigateTo(blogPost.fields.slug)}>
             <Heading
               textAlign={'center'}
               fontSize={[3, 4]}
-              css={{ fontFamily: theme.fonts.display }}
-            >
+              css={{ fontFamily: theme.fonts.display, color: theme.colors.blueGrayScale[7] }}>
               {blogPost.frontmatter.title}
             </Heading>
           </PostCard>
@@ -47,7 +45,7 @@ IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default withTheme(IndexPage);
+export default IndexPage;
 
 export const query = graphql`
   query AllBlogPostsQuery {

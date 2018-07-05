@@ -1,13 +1,13 @@
 import React from 'react';
 import { Row, Column, Container, Box, Text } from 'rebass/emotion';
-import { withTheme } from 'emotion-theming';
+import theme from '../theme';
 
-const About = ({ data, theme }) => (
+const About = ({ data }) => (
   <Row>
-    <Column>
+    <Column px={0}>
       <Container
-        w={[3 / 4, theme.widths.default]}
-        fontSize={4}
+        w={[7 / 8, theme.widths.default]}
+        fontSize={[3, 4]}
         css={{
           backgroundColor: theme.colors.aboutPageYellow,
           borderRadius: theme.radii[2],
@@ -21,10 +21,11 @@ const About = ({ data, theme }) => (
   </Row>
 );
 
-export default withTheme(About);
+export default About;
+
 export const query = graphql`
   query AboutPageQuery {
-    aboutPage: markdownRemark(fileAbsolutePath: { regex: "/pages/about/" }) {
+    aboutPage: markdownRemark(fileAbsolutePath: { regex: "content/pages/about/" }) {
       html
       frontmatter {
         title
