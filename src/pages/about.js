@@ -12,8 +12,7 @@ const About = ({ data, theme }) => (
           backgroundColor: theme.colors.aboutPageYellow,
           borderRadius: theme.radii[2],
           boxShadow: theme.shadows[3],
-        }}
-      >
+        }}>
         <Box py={3}>
           <Text dangerouslySetInnerHTML={{ __html: data.aboutPage.html }} />
         </Box>

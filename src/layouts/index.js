@@ -20,8 +20,7 @@ const Layout = ({ children, data }) => (
           name: 'keywords',
           content: 'experience, human, obvious, ordinary, meaningful, fulfillment',
         },
-      ]}
-    >
+      ]}>
       <link rel="icon" href="/favicon.ico" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="hsla(210, 100%, 25%, 1)" />
