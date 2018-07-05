@@ -2,7 +2,7 @@ const theme = {
   breakpoints: ['32em', '48em', '64em', '80em'],
   fonts: {
     display: '"DIN Next Rounded LT", "Helvetica Neue", system-ui, sans-serif',
-    sans: '"Fira Sans", "Helvetica Neue", system-ui, sans-serif',
+    sans: '"Avenir Next","Fira Sans", "Helvetica Neue", system-ui, sans-serif',
     mono: '"Fira Code", "SF Mono", "Roboto Mono", Menlo, monospace',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72, 96],
