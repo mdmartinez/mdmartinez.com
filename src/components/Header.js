@@ -26,12 +26,11 @@ const Header = () => (
           pl={4}
           color={theme.colors.blueGrayScale[0]}
           css={{ fontFamily: theme.fonts.display }}
-          fontSize={[5, '40px', 6]}
-        >
+          fontSize={[5, '40px', 6]}>
           Daniel Martinez
         </NavLink>
-        <NavLink onClick={() => navigateTo('/about')} ml="auto" mr={2} fontSize={4}>
-          <LinkText pt={['17px', '20px']} pb="5px">
+        <NavLink onClick={() => navigateTo('/about')} ml="auto" mr={2} fontSize={[3, 4]}>
+          <LinkText pt={['12px', '20px']} pb={['5px']}>
             about
           </LinkText>
         </NavLink>
