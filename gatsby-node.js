@@ -1,3 +1,6 @@
+// this suppresses the max listener warning, but doesn't seem to prevent the page undefined error.
+require('events').EventEmitter.prototype._maxListeners = 0;
+
 // Useful for adding queriable data to nodes (like a URL path)
 exports.onCreateNode = require('./gatsby/onCreateNode');
 
