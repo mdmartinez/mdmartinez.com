@@ -4,7 +4,7 @@ import theme from '../theme';
 
 const About = ({ data }) => (
   <Row>
-    <Column px={0}>
+    <Column>
       <Container
         w={[7 / 8, theme.widths.default]}
         fontSize={[3, 4]}
