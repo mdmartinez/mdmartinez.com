@@ -41,12 +41,12 @@ html {
   -webkit-text-size-adjust: 100%;
   overflow-y: scroll;
   overflow-x: scroll;
+  font-size: var(--default-font-size);
 }
 
 body {
   margin: 0;
   color: var(--body-color);
-  font-size: var(--default-font-size);
   line-height: var(--default-line-height);
   font-family: var(--default-font);
   font-weight: normal;
