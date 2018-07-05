@@ -3,25 +3,13 @@ title: Always Remember This
 date: 2018-07-02
 ---
 
-## Build something.
+<p style='font-size:32px'>Build something.</p>
+<p style='font-size:32px'>Tell your story.</p>
+<p style='font-size:32px'>Feel alive.</p>
+<p style='font-size:24px'>Perfect is the enemy of good.</p>
+<p style='font-size:24px'>Come back to it later.</p>
+<p style='font-size:24px'>Progressively enhance.</p>
+<p style='font-size:24px'>Refactor to patterns.</p>
+<p style='font-size:22px'>Remix.</p>
+<p style='font-size:22px'>Flow.</p>
 
-## Tell your story.
-
-## Feel alive.
-
-### Perfect is the enemy of good.
-
-### Come back to it later.
-
-### Progressively enhance.
-
-
-### Confidence loses to evidence.
-
-### Refactor to patterns.
-
-### Code - like all tools of assembly - is a means, not an end.
-
-### Remix.
-
-### Flow.
