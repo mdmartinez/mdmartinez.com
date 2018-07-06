@@ -28,6 +28,7 @@ module.exports = {
         hoist: true,
       },
     },
+    'gatsby-plugin-netlify-cache',
     {
       resolve: `gatsby-plugin-netlify`,
       options: {
