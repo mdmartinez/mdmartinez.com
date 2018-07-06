@@ -33,7 +33,7 @@ const Post = ({ data }) => {
 
   return (
     <div>
-      <Row mt={-4} mb={4} py={5} className={bgGradient}>
+      <Row mb={4} py={5} className={bgGradient}>
         <Column />
         <Column w={[49 / 50, theme.widths.default]} px={[0, 'auto']} my={0}>
           <Container w={[49 / 50, 2 / 3]} px={0}>

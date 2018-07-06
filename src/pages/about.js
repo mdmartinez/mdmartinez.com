@@ -3,7 +3,7 @@ import { Row, Column, Container, Box, Text } from 'rebass/emotion';
 import theme from '../theme';
 
 const About = ({ data, ...props }) => (
-  <Row>
+  <Row mt={4}>
     <Column>
       <Container
         w={[7 / 8, theme.widths.default]}
