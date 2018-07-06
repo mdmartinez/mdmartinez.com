@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Column, Container, Box, Text } from 'rebass/emotion';
 import theme from '../theme';
 
-const About = ({ data }) => (
+const About = ({ data, ...props }) => (
   <Row>
     <Column>
       <Container

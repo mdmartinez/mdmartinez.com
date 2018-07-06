@@ -16,7 +16,7 @@ const PostCard = styled(Card)({
   },
 });
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({ data, ...props }) => (
   <Row>
     <Column>
       <Container w={[3 / 4, theme.widths.default]}>
@@ -50,7 +50,7 @@ export default IndexPage;
 export const query = graphql`
   query AllBlogPostsQuery {
     blogPages: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/content/posts/" } }
+      filter: { fileAbsolutePath: { regex: "//content/posts//" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
