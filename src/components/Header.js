@@ -19,8 +19,9 @@ const LinkText = styled(Text)(props => ({
 
 const Header = ({ headerVisible = true, location }) => {
   const isAbout = location.pathname.match(/^\/about/);
+
   return (
-    <Row py="3em" mb={4} bg="blues.4" css={{ display: headerVisible ? 'flex' : 'none' }}>
+    <Row py="3em" bg="blues.4" css={{ display: headerVisible ? 'flex' : 'none' }}>
       <Column mb={0}>
         <Toolbar bg="transparent">
           <NavLink
