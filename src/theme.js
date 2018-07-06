@@ -93,6 +93,7 @@ const theme = {
     default: 4 / 7,
   },
   space: [0, 4, 8, 16, 32, 64, 128, 156, 188, 220, 256],
+  maxWidths: ['32em'],
   radii: [0, 2, 4, 8, 16, 32],
   shadows: [
     'none',
