@@ -54,8 +54,8 @@ const Post = ({ data }) => {
         <Column w={[39 / 40, theme.widths.default]}>
           <Container w={[39 / 40, 2 / 3]} px={[0, 'auto']} mx={[0, 'auto']}>
             <Measure
-              maxWidth={['48em']}
-              fontSize={[3, '20px']}
+              maxWidth={[0]}
+              fontSize={[2, 3]}
               css={{ color: theme.colors.grayScale[8] }}
               dangerouslySetInnerHTML={{ __html: html }}
             />
