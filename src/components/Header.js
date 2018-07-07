@@ -4,10 +4,12 @@ import { navigateTo } from 'gatsby-link';
 import { Row, Column, Toolbar, NavLink, Text } from 'rebass/emotion';
 import styled from 'react-emotion';
 import theme from '../theme';
+import sharedStyles, { standardHeaderBGGradient } from '../sharedStyles';
 
 const LinkText = styled(Text)(props => ({
   fontFamily: theme.fonts.display,
-  color: theme.colors.blueGrayScale[0],
+  color: theme.colors.blueGrayScale[9],
+  opacity: 0.7,
   transition: 'border-color 0.1s',
   borderWidth: '0px',
   textTransform: 'capitalize',
@@ -17,23 +19,37 @@ const LinkText = styled(Text)(props => ({
   },
 }));
 
-const Header = ({ headerVisible = true, location }) => {
-  const isAbout = location.pathname.match(/^\/about/);
-
+const Header = ({ location }) => {
+  const isAboutPage = location.pathname.match(/^\/about/);
+  const isPost = location.pathname.match(/^\/posts\//);
   return (
-    <Row py="3em" bg="blues.4" css={{ display: headerVisible ? 'flex' : 'none' }}>
+    <Row
+      py={isPost ? 0 : '3em'}
+      bg={isPost ? sharedStyles.customColors.blueGrayFade[0] : ''}
+      className={isPost ? '' : standardHeaderBGGradient}
+      css={{
+        borderBottom: isPost ? `1px solid ${sharedStyles.customColors.blueGrayFade[1]}` : '',
+      }}>
       <Column mb={0}>
         <Toolbar bg="transparent">
           <NavLink
             onClick={() => navigateTo('/')}
-            pl={4}
-            color={theme.colors.blueGrayScale[0]}
+            pl={isPost ? [3, 4] : [4]}
+            color={theme.colors.blueGrayScale[8]}
             css={{ fontFamily: theme.fonts.display }}
-            fontSize={[5, '40px', 6]}>
+            fontSize={isPost ? [4, '40px', 6] : [5, '40px', 6]}>
             Daniel Martinez
           </NavLink>
-          <NavLink onClick={() => navigateTo('/about')} ml="auto" mr={2} fontSize={[3, 4]}>
-            <LinkText isActive={isAbout} pt={['12px', '20px']} pb={['5px']} px={1}>
+          <NavLink
+            onClick={() => navigateTo('/about')}
+            ml="auto"
+            mr={2}
+            fontSize={isPost ? [2, 4] : [3, 4]}>
+            <LinkText
+              isActive={isAboutPage}
+              pt={isPost ? ['8px', '10px'] : ['12px', '20px']}
+              pb={['5px']}
+              px={1}>
               about
             </LinkText>
           </NavLink>
@@ -41,6 +57,10 @@ const Header = ({ headerVisible = true, location }) => {
       </Column>
     </Row>
   );
+};
+
+Header.propTypes = {
+  location: PropTypes.object.isRequired,
 };
 
 export default Header;

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Header from '../components/Header';
-import PostHeader from '../components/PostHeader';
 import { Provider } from 'rebass/emotion';
 import 'typeface-fira-sans';
 import '../css/global.css';
@@ -25,12 +24,7 @@ class Layout extends React.Component {
           ]}
         />
         <Provider theme={theme}>
-          {isPost ? (
-            <PostHeader siteTitle={data.site.siteMetadata.title} location={location} />
-          ) : (
-            <Header siteTitle={data.site.siteMetadata.title} location={location} />
-          )}
-
+          <Header siteTitle={data.site.siteMetadata.title} location={location} />
           {children({ ...this.props })}
         </Provider>
       </div>
