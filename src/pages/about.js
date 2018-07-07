@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Column, Container, Box, Text } from 'rebass/emotion';
 import theme from '../theme';
+import chroma from 'chroma-js';
 
 const About = ({ data, ...props }) => (
   <Row mt={4}>
@@ -9,7 +10,9 @@ const About = ({ data, ...props }) => (
         w={[7 / 8, theme.widths.default]}
         fontSize={[3, 4]}
         css={{
-          backgroundColor: theme.colors.aboutPageYellow,
+          backgroundColor: chroma(theme.colors.blueGrayScale[0])
+            .alpha(0.5)
+            .css('hsl'),
           borderRadius: theme.radii[2],
           boxShadow: theme.shadows[3],
         }}>

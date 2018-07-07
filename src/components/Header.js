@@ -33,7 +33,7 @@ const Header = ({ headerVisible = true, location }) => {
             Daniel Martinez
           </NavLink>
           <NavLink onClick={() => navigateTo('/about')} ml="auto" mr={2} fontSize={[3, 4]}>
-            <LinkText isActive={isAbout} pt={['12px', '20px']} pb={['5px']}>
+            <LinkText isActive={isAbout} pt={['12px', '20px']} pb={['5px']} px={1}>
               about
             </LinkText>
           </NavLink>

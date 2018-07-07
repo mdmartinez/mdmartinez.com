@@ -31,7 +31,8 @@ const IndexPage = ({ data, ...props }) => (
             <Heading
               textAlign={'center'}
               fontSize={[3, 4]}
-              css={{ fontFamily: theme.fonts.display, color: theme.colors.blueGrayScale[7] }}>
+              color={theme.colors.blueGrayScale[7]}
+              css={{ fontFamily: theme.fonts.display }}>
               {blogPost.frontmatter.title}
             </Heading>
           </PostCard>

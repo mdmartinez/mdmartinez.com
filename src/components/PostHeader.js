@@ -48,7 +48,7 @@ const PostHeader = ({ headerVisible = true, location }) => {
             Daniel Martinez
           </NavLink>
           <NavLink onClick={() => navigateTo('/about')} ml="auto" mr={2} fontSize={[2, 4]}>
-            <LinkText isActive={isAbout} pt={['8px', '10px']} pb={['5px']}>
+            <LinkText isActive={isAbout} pt={['8px', '10px']} pb={['5px']} px={1}>
               about
             </LinkText>
           </NavLink>
