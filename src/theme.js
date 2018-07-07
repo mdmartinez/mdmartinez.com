@@ -98,7 +98,6 @@ const theme = {
     'inset 0 0 0 4px #eee, 0 0 12px #eee',
     'inset 0 0 0 4px #eee, 0 0 16px #eee',
   ],
-  cardShadow: 'inset 0 0 0 1px hsla(210, 100%, 75%, 0.4), 0 0 4px hsla(210, 100%, 75%, 0.4)',
 };
 
 export default theme;
