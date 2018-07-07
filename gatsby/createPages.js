@@ -19,7 +19,14 @@ module.exports = async ({ graphql, boundActionCreators }) => {
           filter: { fileAbsolutePath: { regex: "content/posts/" } }
           limit: 1000
         ) {
+          totalCount
           edges {
+            next {
+              id
+            }
+            previous {
+              id
+            }
             node {
               fields {
                 slug
@@ -36,16 +43,20 @@ module.exports = async ({ graphql, boundActionCreators }) => {
 
     throw Error(allMarkdownPosts.errors);
   }
-
+  const postList = allMarkdownPosts.data.postList.edges;
   // create routes for 'posts'
-  allMarkdownPosts.data.postList.edges.forEach(edge => {
+  postList.forEach((edge, index) => {
     const slug = edge.node.fields.slug;
+    const next = index === 0 ? null : postList[index - 1].node;
+    const prev = index === postList.length - 1 ? null : postList[index + 1].node;
     const createBlogPost = path =>
       createPage({
         path: `${path}`,
         component: blogPostTemplate,
         context: {
           slug,
+          next,
+          prev,
         },
       });
     // Register blog post URL.
