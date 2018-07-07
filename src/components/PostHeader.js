@@ -4,10 +4,20 @@ import { navigateTo } from 'gatsby-link';
 import { Row, Column, Toolbar, NavLink, Text } from 'rebass/emotion';
 import styled from 'react-emotion';
 import theme from '../theme';
+import chroma from 'chroma-js';
+
+const bgBase = theme.colors.blueGrayScale[1];
+const headerBG = chroma(bgBase)
+  .alpha(0.75)
+  .css('hsl');
+const headerBorderColor = chroma(theme.colors.blueGrayScale[2])
+  .alpha(0.4)
+  .css('hsl');
 
 const LinkText = styled(Text)(props => ({
   fontFamily: theme.fonts.display,
-  color: theme.colors.blueGrayScale[0],
+  color: theme.colors.blueGrayScale[9],
+  opacity: 0.7,
   transition: 'border-color 0.1s',
   borderWidth: '0px',
   textTransform: 'capitalize',
@@ -21,13 +31,18 @@ const PostHeader = ({ headerVisible = true, location }) => {
   const isAbout = location.pathname.match(/^\/about/);
 
   return (
-    <Row bg="blues.4" css={{ display: headerVisible ? 'flex' : 'none' }}>
+    <Row
+      bg={headerBG}
+      css={{
+        borderBottom: `1px solid ${headerBorderColor}`,
+        display: headerVisible ? 'flex' : 'none',
+      }}>
       <Column mb={0}>
         <Toolbar bg="transparent">
           <NavLink
             onClick={() => navigateTo('/')}
-            pl={[2, 4]}
-            color={theme.colors.blueGrayScale[0]}
+            pl={[3, 4]}
+            color={theme.colors.blueGrayScale[8]}
             css={{ fontFamily: theme.fonts.display }}
             fontSize={[4, '40px', 6]}>
             Daniel Martinez

@@ -1,10 +1,13 @@
 import React from 'react';
-import { Row, Column, Container, Heading, Measure, Border } from 'rebass/emotion';
+import { Row, Column, Container, Heading, Measure } from 'rebass/emotion';
 import { css } from 'react-emotion';
-import chroma from 'chroma-js';
 import theme from '../theme';
+import chroma from 'chroma-js';
 
-const blue = theme.colors.blueGrayScale[1];
+const base = theme.colors.blueGrayScale[1];
+const blue = chroma(base)
+  .alpha(0.75)
+  .css('hsl');
 
 const gradients = [
   `${blue},`,
@@ -12,10 +15,10 @@ const gradients = [
     .alpha(0.75)
     .css('hsl')} 25%,`,
   `${chroma(blue)
-    .alpha(0.35)
+    .alpha(0.4)
     .css('hsl')} 50%,`,
   `${chroma(blue)
-    .alpha(0.12)
+    .alpha(0.2)
     .css('hsl')} 75%,`,
   `${chroma(blue)
     .alpha(0.01)
@@ -23,10 +26,10 @@ const gradients = [
 ];
 
 const bgGradient = css({
-  background: `linear-gradient(to right, ${gradients.join('')})`,
+  background: `linear-gradient(to bottom, ${gradients.join('')})`,
 });
 
-const Post = ({ data }) => {
+const Post = ({ data, pathContext }) => {
   const {
     page: { html, frontmatter },
   } = data;
@@ -36,7 +39,7 @@ const Post = ({ data }) => {
       <Row mb={4} py={5} className={bgGradient}>
         <Column />
         <Column w={[49 / 50, theme.widths.default]} px={[0, 'auto']} my={0}>
-          <Container w={[49 / 50, 2 / 3]} px={0}>
+          <Container w={[49 / 50, 2 / 3]} px={0} px={[0, 'auto']} mx={[0, 'auto']}>
             <Heading
               color={theme.colors.blueGrayScale[7]}
               mb={0}
@@ -49,13 +52,14 @@ const Post = ({ data }) => {
         </Column>
         <Column />
       </Row>
-      <Row>
+      <Row mt={-3}>
         <Column />
-        <Column w={[39 / 40, theme.widths.default]}>
+        <Column w={[39 / 40, theme.widths.default]} px={[0, 'auto']} mx={[0, 'auto']}>
           <Container w={[39 / 40, 2 / 3]} px={[0, 'auto']} mx={[0, 'auto']}>
             <Measure
-              maxWidth={[0]}
-              fontSize={[2, 3]}
+              maxWidth={['30em']}
+              fontSize={['17px', 3]}
+              lineHeight={1}
               css={{ color: theme.colors.grayScale[8] }}
               dangerouslySetInnerHTML={{ __html: html }}
             />
