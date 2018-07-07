@@ -1,33 +1,7 @@
 import React from 'react';
 import { Row, Column, Container, Heading, Measure } from 'rebass/emotion';
-import { css } from 'react-emotion';
 import theme from '../theme';
-import chroma from 'chroma-js';
-
-const base = theme.colors.blueGrayScale[1];
-const blue = chroma(base)
-  .alpha(0.75)
-  .css('hsl');
-
-const gradients = [
-  `${blue},`,
-  `${chroma(blue)
-    .alpha(0.75)
-    .css('hsl')} 25%,`,
-  `${chroma(blue)
-    .alpha(0.4)
-    .css('hsl')} 50%,`,
-  `${chroma(blue)
-    .alpha(0.2)
-    .css('hsl')} 75%,`,
-  `${chroma(blue)
-    .alpha(0.01)
-    .css('hsl')} 100%`,
-];
-
-const bgGradient = css({
-  background: `linear-gradient(to bottom, ${gradients.join('')})`,
-});
+import sharedStyles, { postTitleBGGradient } from '../sharedStyles';
 
 const Post = ({ data, pathContext }) => {
   const {
@@ -36,7 +10,7 @@ const Post = ({ data, pathContext }) => {
 
   return (
     <div>
-      <Row mb={4} py={5} className={bgGradient}>
+      <Row mb={4} py={5} className={postTitleBGGradient}>
         <Column />
         <Column w={[49 / 50, theme.widths.default]} px={[0, 'auto']} my={0}>
           <Container w={[49 / 50, 2 / 3]} px={0} px={[0, 'auto']} mx={[0, 'auto']}>
