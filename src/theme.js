@@ -14,8 +14,6 @@ const theme = {
     bold: 700,
   },
   colors: {
-    brandColor: 'hsla(199, 80%, 56%, 1)',
-    brandColorLight: 'hsla(199, 80%, 56%, 0.8)',
     blues: [
       'hsla(197, 100%, 65%, 1)',
       'hsla(199, 80%, 56%, 1)',
@@ -84,10 +82,6 @@ const theme = {
       'hsla(0, 0%, 15%, 1)',
       'hsla(0, 0%, 5%, 1)',
     ],
-    lightBlue: 'hsla(210, 100%, 50%, 0.5)',
-    veryLightBlue: 'hsla(210, 100%, 75%, 0.4)',
-    lightYellow: 'hsla(60, 100%, 80%, 0.8)',
-    aboutPageYellow: 'hsla(44, 100%, 60%, 0.1)',
   },
   widths: {
     default: 4 / 7,
