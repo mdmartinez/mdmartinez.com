@@ -19,17 +19,27 @@ const LinkText = styled(Text)(props => ({
   },
 }));
 
+const headerStyles = {
+  default: {
+    py: ['3em'],
+    bg: '',
+    className: standardHeaderBGGradient,
+    css: { borderBottom: '' },
+  },
+  post: {
+    py: [0],
+    bg: sharedStyles.customColors.blueGrayFade[0],
+    className: '',
+    css: { borderBottom: `1px solid ${sharedStyles.customColors.blueGrayFade[1]}` },
+  },
+};
+
 const Header = ({ location }) => {
   const isAboutPage = location.pathname.match(/^\/about/);
   const isPost = location.pathname.match(/^\/posts\//);
+  const pageStyle = isPost ? { ...headerStyles.post } : { ...headerStyles.default };
   return (
-    <Row
-      py={isPost ? 0 : '3em'}
-      bg={isPost ? sharedStyles.customColors.blueGrayFade[0] : ''}
-      className={isPost ? '' : standardHeaderBGGradient}
-      css={{
-        borderBottom: isPost ? `1px solid ${sharedStyles.customColors.blueGrayFade[1]}` : '',
-      }}>
+    <Row {...pageStyle}>
       <Column mb={0}>
         <Toolbar bg="transparent">
           <NavLink
