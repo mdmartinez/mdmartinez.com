@@ -11,8 +11,24 @@
 }
 
 :root {
-    --default-font: '"Fira Sans", "Helvetica Neue", system-ui, sans-serif';
-    --fallback-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", georgia, serif, sans-serif;
+    --default-font: "Fira Sans", "Helvetica Neue", system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+    --fallback-fonts: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    georgia,
+    serif,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol';
     --fallback-monospaced-fonts: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
     --default-font-size: 16px;
     --default-line-height: 1.3;
@@ -40,6 +56,8 @@
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
     overflow-y: scroll;
     overflow-x: scroll;
     font-size: var(--default-font-size);
@@ -132,9 +150,12 @@ header,
 main,
 menu,
 nav,
-section,
-summary {
+section {
     display: block;
+}
+
+summary {
+    display: list-item;
 }
 
 audio,
@@ -170,7 +191,6 @@ a:hover {
 
 abbr[title] {
     border-bottom: none;
-    text-decoration: underline;
     text-decoration: underline dotted;
 }
 
