@@ -28,6 +28,13 @@ module.exports = {
         hoist: true,
       },
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://mdmartinez.us18.list-manage.com/subscribe/post?u=d2ba54848ea37cc4b8252f551&amp;id=5f96d69b04', // see instructions section below
+      },
+    },
     'gatsby-plugin-netlify-cache',
     {
       resolve: `gatsby-plugin-netlify`,
