@@ -22,7 +22,6 @@
     "react-emotion": "^9.2.4",
     "react-helmet": "^5.2.0",
     "rebass": "^2.0.0",
-    "recompose": "^0.27.1",
     "styled-system": "^2.3.2",
     "typeface-fira-sans": "0.0.54"
   },
