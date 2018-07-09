@@ -28,21 +28,24 @@ export default class NewsletterSignUpForm extends React.Component {
     this.setState({ honeypot: e.target.value });
   };
 
-  _handleSubmit = async e => {
+  _handleSubmit = e => {
     e.preventDefault();
     this.setState({ status: `sending`, msg: null });
-    const result = await addToMailchimp(this.state.email, {
+
+    addToMailchimp(this.state.email, {
       PATHNAME: document.location.pathname,
       b_d2ba54848ea37cc4b8252f551_5f96d69b04: this.state.honeypot,
+    }).then(result => {
+      if (result.result === 'error') {
+        console.log(result);
+        this.setState({ status: result.result, msg: result.msg });
+      } else if (result.result === 'success') {
+        console.log(result);
+        this.setState({ status: `success`, msg: result.msg });
+      } else {
+        this.setState({ status: `error`, msg: JSON.stringify(result) });
+      }
     });
-    if (result.result === 'error') {
-      this.setState({ status: result.result, msg: result.msg });
-    } else if (result.result === 'success') {
-      this.setState({ status: `success`, msg: result.msg });
-    } else {
-      this.setState({ status: `error`, msg: JSON.stringify(result) });
-    }
-    console.log(result);
   };
 
   render() {
