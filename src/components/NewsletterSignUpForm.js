@@ -1,8 +1,9 @@
 import React from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import { Input, Button, Label } from 'rebass/emotion';
-import sharedStyles from '../sharedStyles';
 import styled from 'react-emotion';
+import sharedStyles from '../sharedStyles';
+import theme from '../theme';
 
 const FormInput = styled(Input)({
   fontSize: '20px',
@@ -10,50 +11,38 @@ const FormInput = styled(Input)({
   '&:focus': {
     boxShadow: sharedStyles.shadows.indexPost,
   },
+  ':: placeholder': {
+    color: theme.colors.blueGrayScale[4],
+    opacity: 1,
+  },
 });
 
 export default class NewsletterSignUpForm extends React.Component {
-  state = { email: '' };
+  state = { email: '', honeypot: '' };
 
   _handleEmailChange = e => {
     this.setState({ email: e.target.value });
   };
 
-  _postEmailToMailchimp = (email, attributes) => {
-    addToMailchimp(email, attributes)
-      .then(result => {
-        // Mailchimp always returns a 200 response
-        // So we check the result for MC errors & failures
-        // console.log(result);
-        if (result.result !== `success`) {
-          this.setState({
-            status: `error`,
-            msg: result.msg,
-          });
-        } else {
-          // Email address succesfully subcribed to Mailchimp
-          this.setState({
-            status: `success`,
-            msg: result.msg,
-          });
-        }
-      })
-      .catch(err => {
-        // Network failures, timeouts, etc
-        this.setState({
-          status: `error`,
-          msg: JSON.stringify(err),
-        });
-      });
+  _captureHoneyPot = e => {
+    this.setState({ honeypot: e.target.value });
   };
 
   _handleSubmit = async e => {
     e.preventDefault();
-    const result = await this._postEmailToMailchimp(this.state.email, {
-      pathname: document.location.pathname,
-    });
-    console.log(result);
     this.setState({ status: `sending`, msg: null });
+    const result = await addToMailchimp(this.state.email, {
+      PATHNAME: document.location.pathname,
+      b_d2ba54848ea37cc4b8252f551_5f96d69b04: this.state.honeypot,
+    });
+    if (result.result === 'error') {
+      this.setState({ status: result.result, msg: result.msg });
+    } else if (result.result === 'success') {
+      this.setState({ status: `success`, msg: result.msg });
+    } else {
+      this.setState({ status: `error`, msg: JSON.stringify(result) });
+    }
+    console.log(result);
   };
 
   render() {
@@ -75,8 +64,8 @@ export default class NewsletterSignUpForm extends React.Component {
             <input
               type="text"
               name="b_d2ba54848ea37cc4b8252f551_5f96d69b04"
-              tabindex="-1"
-              value=""
+              tabIndex="-1"
+              onChange={this._captureHoneyPot}
             />
           </div>
           <Button type="submit" value="Subscribe" name="Subscribe" children="Subscribe" />
