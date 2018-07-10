@@ -7,6 +7,10 @@ const sharedStyles = {
     indexPost: `inset 0 0 0 1px ${theme.colors.blueGrayScale[1]}, 0 0 4px ${
       theme.colors.blueGrayScale[1]
     }`,
+    newsletter: `inset 0 0 0 1px ${chroma(theme.colors.blueGrayScale[5])
+      .alpha(0.4)
+      .css('hsl')}`,
+    newsletterFocus: `inset 0 0 0 2px ${theme.colors.blues[0]}, 0 0 8px ${theme.colors.blues[0]}`,
   },
   customColors: {
     blueGrayFade: [
@@ -14,6 +18,12 @@ const sharedStyles = {
         .alpha(0.75)
         .css('hsl'),
       chroma(theme.colors.blueGrayScale[2])
+        .alpha(0.4)
+        .css('hsl'),
+      chroma(theme.colors.blueGrayScale[5])
+        .alpha(0.8)
+        .css('hsl'),
+      chroma(theme.colors.blueGrayScale[5])
         .alpha(0.4)
         .css('hsl'),
     ],
