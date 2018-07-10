@@ -9,11 +9,16 @@ import sharedStyles from '../sharedStyles';
 const PostCard = styled(Card)({
   fontSize: '20px',
   textTransform: 'capitalize',
-  transition: 'box-shadow 0.1s, transform 0.1s',
+  transition: 'all 0.1s',
   cursor: 'pointer',
   '&:hover': {
-    boxShadow: sharedStyles.shadows.indexPost,
-    transform: 'scale(1.01, 1.01)',
+    transform: `translateY(-2px) scale(1.01, 1.01)`,
+    boxShadow: sharedStyles.shadows.high,
+  },
+  '&:active': {
+    boxShadow: sharedStyles.shadows.low,
+    transform: `translateY(0) scale(1.0, 1.0)`,
+    transition: `transform 50ms`,
   },
 });
 

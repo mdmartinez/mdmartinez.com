@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Column, Container, Heading, Measure, Divider } from 'rebass/emotion';
 import theme from '../theme';
 import sharedStyles, { postTitleBGGradient } from '../sharedStyles';
-import NewsletterSignUpForm from '../components/NewsletterSignUpForm';
+import EmailCaptureForm from '../components/EmailCaptureForm';
 
 const Post = ({ data, pathContext }) => {
   const {
@@ -14,6 +14,11 @@ const Post = ({ data, pathContext }) => {
     px: [0, 'auto'],
     mx: [0, 'auto'],
   };
+
+  let canonicalLink;
+  if (frontmatter.canonicalLink) {
+    canonicalLink = <link rel="canonical" href={frontmatter.canonicalLink} />;
+  }
 
   return (
     <div>
@@ -53,7 +58,7 @@ const Post = ({ data, pathContext }) => {
         <Column {...postColumnStyle}>
           <Container {...postColumnStyle}>
             <Divider borderBottom={2} borderColor={sharedStyles.customColors.blueGrayFade[1]} />
-            <NewsletterSignUpForm />
+            <EmailCaptureForm />
           </Container>
         </Column>
         <Column />
