@@ -1,12 +1,21 @@
 import React from 'react';
-import { Row, Column, Container, Heading, Measure, Divider, Link, Text } from 'rebass/emotion';
 import { navigateTo } from 'gatsby-link';
-import theme from '../theme';
-import sharedStyles, { postTitleBGGradient } from '../sharedStyles';
-import { css } from 'emotion';
-import EmailCaptureForm from '../components/EmailCaptureForm';
+import {
+  Row,
+  Column,
+  Container,
+  Heading,
+  Measure,
+  Divider,
+  Flex,
+  Link,
+  Text,
+} from 'rebass/emotion';
 import MdArrowForward from 'react-icons/lib/md/arrow-forward';
 import MdArrowBack from 'react-icons/lib/md/arrow-back';
+import EmailCaptureForm from '../components/EmailCaptureForm';
+import style, { postTitleBGGradient, animatedUnderline } from '../utils/style';
+import theme from '../theme';
 
 class Post extends React.Component {
   render() {
@@ -24,22 +33,6 @@ class Post extends React.Component {
       this.props.pathContext.next.fields &&
       this.props.pathContext.next.fields.slug &&
       this.props.pathContext.next;
-
-    const animatedUnderline = css`
-      &::after {
-        content: '';
-        display: block;
-        width: 100%;
-        margin-top: 3px;
-        height: 3px;
-        transition: transform 250ms ease;
-        transform: scaleX(0);
-        background-color: ${theme.colors.blueGrayScale[7]};
-      }
-      &:hover::after {
-        transform: scaleX(1);
-      }
-    `;
 
     const postColumnStyle = {
       w: [1, theme.widths.default],
@@ -89,7 +82,7 @@ class Post extends React.Component {
           <Column />
           <Column {...postColumnStyle}>
             <Container {...postColumnStyle}>
-              <Divider borderBottom={2} borderColor={sharedStyles.customColors.blueGrayFade[1]} />
+              <Divider borderBottom={2} borderColor={style.customColors.blueGrayFade[1]} />
               <EmailCaptureForm />
               {prev && (
                 <Link
