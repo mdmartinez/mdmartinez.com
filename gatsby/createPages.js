@@ -16,8 +16,9 @@ module.exports = async ({ graphql, boundActionCreators }) => {
     `
       {
         postList: allMarkdownRemark(
-          filter: { fileAbsolutePath: { regex: "content/posts/" } }
+          filter: { fileAbsolutePath: { regex: "/content/posts//" } }
           limit: 1000
+          sort: { fields: [frontmatter___date], order: DESC }
         ) {
           totalCount
           edges {
