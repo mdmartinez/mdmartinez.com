@@ -21,15 +21,16 @@ module.exports = async ({ graphql, boundActionCreators }) => {
         ) {
           totalCount
           edges {
-            next {
-              id
-            }
-            previous {
-              id
-            }
             node {
               fields {
                 slug
+              }
+              frontmatter {
+                title
+                date
+                draft
+                canonicalLink
+                tags
               }
             }
           }
