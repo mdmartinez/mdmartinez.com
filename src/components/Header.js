@@ -4,20 +4,21 @@ import { navigateTo } from 'gatsby-link';
 import { Row, Column, Toolbar, NavLink, Text } from 'rebass/emotion';
 import styled from 'react-emotion';
 import theme from '../theme';
-import sharedStyles, { standardHeaderBGGradient } from '../sharedStyles';
+import style, { standardHeaderBGGradient, animatedUnderline, underline } from '../utils/style';
 
-const LinkText = styled(Text)(props => ({
-  fontFamily: theme.fonts.display,
-  color: theme.colors.blueGrayScale[9],
-  opacity: 0.7,
-  transition: 'border-color 0.1s',
-  borderWidth: '0px',
-  textTransform: 'capitalize',
-  borderBottom: props.isActive ? `2px solid ${theme.colors.oranges[1]}` : '2px solid transparent',
-  '&:hover': {
-    borderColor: theme.colors.oranges[1],
-  },
-}));
+const LinkText = styled(Text)(
+  props => ({
+    fontFamily: theme.fonts.display,
+    color: theme.colors.blueGrayScale[9],
+    opacity: 0.7,
+    transition: 'border-color 0.1s',
+    borderWidth: '0px',
+    textTransform: 'capitalize',
+    '&:hover': animatedUnderline,
+  }),
+  animatedUnderline,
+  props => props.isActive && underline
+);
 
 const headerStyles = {
   default: {
@@ -28,9 +29,9 @@ const headerStyles = {
   },
   post: {
     py: [0],
-    bg: sharedStyles.customColors.blueGrayFade[0],
+    bg: style.customColors.blueGrayFade[0],
     className: '',
-    css: { borderBottom: `1px solid ${sharedStyles.customColors.blueGrayFade[1]}` },
+    css: { borderBottom: `1px solid ${style.customColors.blueGrayFade[1]}` },
   },
 };
 
@@ -57,6 +58,7 @@ const Header = ({ location }) => {
             fontSize={isPost ? [2, 4] : [3, 4]}>
             <LinkText
               isActive={isAboutPage}
+              // className={'active'}
               pt={isPost ? ['8px', '10px'] : ['12px', '20px']}
               pb={['5px']}
               px={1}>
