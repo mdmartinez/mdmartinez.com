@@ -21,6 +21,7 @@
     "prismjs": "^1.15.0",
     "react-emotion": "^9.2.4",
     "react-helmet": "^5.2.0",
+    "react-icons": "^2.2.7",
     "rebass": "^2.0.0",
     "styled-system": "^2.3.2",
     "typeface-fira-sans": "0.0.54"
