@@ -35,6 +35,19 @@ module.exports = {
           'https://mdmartinez.us18.list-manage.com/subscribe/post?u=d2ba54848ea37cc4b8252f551&amp;id=5f96d69b04', // see instructions section below
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Daniel Martinez',
+        short_name: 'Daniel Martinez',
+        start_url: '/',
+        background_color: '#35AFE8',
+        theme_color: '#E1673D',
+        display: 'minimal-ui',
+        icon: 'src/images/portrait.png', // This path is relative to the root of the site.
+      },
+    },
+    'gatsby-plugin-offline',
     'gatsby-plugin-netlify-cache',
     {
       resolve: `gatsby-plugin-netlify`,
