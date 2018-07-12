@@ -7,8 +7,8 @@ const Alert = ({
   hoverColor = theme.colors.oranges[5],
   closeButtonPosition = '10px',
   children,
-  toggleHandler
-}) =>  (
+  toggleHandler,
+}) => (
   <Message
     w={[8 / 9, theme.widths.default]}
     mb={3}
