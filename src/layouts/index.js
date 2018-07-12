@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Header from '../components/Header';
 import { Provider } from 'rebass/emotion';
+import Header from '../components/Header';
 import 'typeface-fira-sans';
 import '../css/global.css';
 import theme from '../theme';

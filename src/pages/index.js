@@ -4,7 +4,7 @@ import { navigateTo } from 'gatsby-link';
 import { Row, Column, Container, Card, Heading } from 'rebass/emotion';
 import styled from 'react-emotion';
 import theme from '../theme';
-import sharedStyles from '../sharedStyles';
+import style from '../utils/style';
 
 const PostCard = styled(Card)({
   fontSize: '20px',
@@ -13,10 +13,10 @@ const PostCard = styled(Card)({
   cursor: 'pointer',
   '&:hover': {
     transform: `translateY(-2px) scale(1.01, 1.01)`,
-    boxShadow: sharedStyles.shadows.high,
+    boxShadow: style.shadows.high,
   },
   '&:active': {
-    boxShadow: sharedStyles.shadows.low,
+    boxShadow: style.shadows.low,
     transform: `translateY(0) scale(1.0, 1.0)`,
     transition: `transform 50ms`,
   },

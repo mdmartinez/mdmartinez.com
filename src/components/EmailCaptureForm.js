@@ -1,9 +1,9 @@
 import React from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import { Input, Button, Label, Text } from 'rebass/emotion';
+import Alert from './Alert';
 import styled from 'react-emotion';
-import sharedStyles from '../sharedStyles';
-import Alert from '../components/Alert';
+import style from '../utils/style';
 import theme from '../theme';
 
 const FormInput = styled(Input)({
@@ -12,13 +12,13 @@ const FormInput = styled(Input)({
   paddingTop: theme.space[3],
   paddingBottom: theme.space[3],
   paddingLeft: theme.space[3],
-  boxShadow: sharedStyles.shadows.newsletter,
-  transition: 'boxShadow 250ms cubic-bezier(0.4, 0, 0.2, 1)',
+  boxShadow: style.shadows.newsletter,
+  transition: `boxShadow ${style.transitions.speedDefault} ${style.transitions.curveDefault}`,
   '&:focus': {
-    boxShadow: sharedStyles.shadows.newsletterFocus,
+    boxShadow: style.shadows.newsletterFocus,
   },
   ':: placeholder': {
-    color: sharedStyles.customColors.blueGrayFade[2],
+    color: style.customColors.blueGrayFade[2],
     opacity: 1,
   },
 });
@@ -149,10 +149,8 @@ export default class EmailCaptureForm extends React.Component {
           <Button
             onClick={this._toggleNotification}
             css={{
-              boxShadow: sharedStyles.shadows.newsletter,
-              transition: `all ${sharedStyles.transitions.speedFast} ${
-                sharedStyles.transitions.curveDefault
-              }`,
+              boxShadow: style.shadows.newsletter,
+              transition: `all ${style.transitions.speedFast} ${style.transitions.curveDefault}`,
               '&:hover': { backgroundColor: theme.colors.blues[1], color: 'white' },
               '&:focus': { backgroundColor: theme.colors.blues[3], color: 'white' },
             }}
