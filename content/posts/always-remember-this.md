@@ -1,6 +1,9 @@
 ---
 title: Always Remember This
 date: 2018-07-02
+draft: false
+canonicalLink: '/posts/always-remember-this'
+tags: ['philosophical']
 ---
 
 <p style='font-size:32px'>Build something.</p>
