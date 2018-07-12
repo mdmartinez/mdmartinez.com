@@ -81,7 +81,7 @@ export default class EmailCaptureForm extends React.Component {
     const fixedLink = updateLink && updateLink.slice(0, updateLink.length - 1);
     const updateHTML = fixedLink && `you can update your profile <a href=${fixedLink}>here</a>`;
     const blankEmail = email === '' && !msg && notification;
-    const alreadySubscribed = status === 'error' && notification && msg.includes('already')
+    const alreadySubscribed = status === 'error' && notification && msg.includes('already');
     const error = status === 'error' && notification && !msg.includes('already');
     const success = status === 'success' && notification;
     return (
@@ -112,7 +112,6 @@ export default class EmailCaptureForm extends React.Component {
               children="You are already subscribed to the newsletter!"
               msg={msg}
               toggleHandler={this._toggleNotification}
-              
             />
           )}
           {error && (
