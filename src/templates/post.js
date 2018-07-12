@@ -8,6 +8,7 @@ import {
   Measure,
   Divider,
   Flex,
+  Box,
   Link,
   Text,
 } from 'rebass/emotion';
@@ -44,7 +45,7 @@ class Post extends React.Component {
     if (frontmatter.canonicalLink) {
       canonicalLink = <link rel="canonical" href={frontmatter.canonicalLink} />;
     }
-
+    console.log(this.props.pathContext);
     return (
       <div>
         <Row mb={4} py={5} className={postTitleBGGradient}>
@@ -78,56 +79,75 @@ class Post extends React.Component {
           </Column>
           <Column />
         </Row>
-        <Row>
+        <Row css={{ label: 'bottom-row' }}>
           <Column />
-          <Column {...postColumnStyle}>
-            <Container {...postColumnStyle}>
+          <Column {...postColumnStyle} css={{ label: 'bottom-mid-column' }}>
+            <Container {...postColumnStyle} css={{ label: 'bottom-container' }}>
               <Divider borderBottom={2} borderColor={style.customColors.blueGrayFade[1]} />
               <EmailCaptureForm />
-              {prev && (
-                <Link
-                  onClick={() => navigateTo(prev.fields.slug)}
-                  className={animatedUnderline}
-                  css={{
-                    fontWeight: 'bold',
-                    display: 'inline-block',
-                    color: theme.colors.grayScale[8],
-                    opacity: 0.8,
-                    cursor: 'pointer',
-                  }}>
-                  <Text css={{ color: theme.colors.grayScale[8], opacity: 0.5 }} mt={4} mb={3}>
-                    Previous
-                  </Text>
-                  <MdArrowBack
-                    size={18}
-                    color={theme.colors.grayScale[8]}
-                    style={{ verticalAlign: 'sub', opacity: 0.8, marginRight: '6px' }}
-                  />
-                  {prev.frontmatter.title}
-                </Link>
-              )}
-              {next && (
-                <Link
-                  onClick={() => navigateTo(next.fields.slug)}
-                  className={animatedUnderline}
-                  css={{
-                    fontWeight: 'bold',
-                    display: 'inline-block',
-                    color: theme.colors.grayScale[8],
-                    opacity: 0.8,
-                    cursor: 'pointer',
-                  }}>
-                  <Text css={{ color: theme.colors.grayScale[8], opacity: 0.5 }} mt={4} mb={3}>
-                    Next
-                  </Text>
-                  {next.frontmatter.title}
-                  <MdArrowForward
-                    size={18}
-                    color={theme.colors.grayScale[8]}
-                    style={{ verticalAlign: 'sub', opacity: 0.8, marginLeft: '6px' }}
-                  />
-                </Link>
-              )}
+              <Flex justifyContent="space-between" css={{ label: 'flex' }}>
+                <Box>
+                  {prev && (
+                    <Link
+                      onClick={() => navigateTo(prev.fields.slug)}
+                      className={animatedUnderline}
+                      css={{
+                        fontWeight: 'bold',
+                        display: 'inline-block',
+                        color: theme.colors.grayScale[8],
+                        opacity: 0.8,
+                        cursor: 'pointer',
+                      }}>
+                      <Text
+                        css={{
+                          color: theme.colors.grayScale[8],
+                          opacity: 0.5,
+                        }}
+                        mt={4}
+                        mb={3}>
+                        Previous
+                      </Text>
+                      <MdArrowBack
+                        size={18}
+                        color={theme.colors.grayScale[8]}
+                        style={{ verticalAlign: 'sub', opacity: 0.8, marginRight: '6px' }}
+                      />
+                      {prev.frontmatter.title}
+                    </Link>
+                  )}
+                </Box>
+                <Box>
+                  {next && (
+                    <Link
+                      onClick={() => navigateTo(next.fields.slug)}
+                      className={animatedUnderline}
+                      css={{
+                        fontWeight: 'bold',
+                        display: 'inline-block',
+                        color: theme.colors.grayScale[8],
+                        opacity: 0.8,
+                        cursor: 'pointer',
+                      }}>
+                      <Text
+                        css={{
+                          color: theme.colors.grayScale[8],
+                          opacity: 0.5,
+                        }}
+                        textAlign="end"
+                        mt={4}
+                        mb={3}>
+                        Next
+                      </Text>
+                      {next.frontmatter.title}
+                      <MdArrowForward
+                        size={18}
+                        color={theme.colors.grayScale[8]}
+                        style={{ verticalAlign: 'sub', opacity: 0.8, marginLeft: '6px' }}
+                      />
+                    </Link>
+                  )}
+                </Box>
+              </Flex>
             </Container>
           </Column>
           <Column />
