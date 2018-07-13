@@ -8,7 +8,7 @@ const containerBG = chroma(theme.colors.blueGrayScale[0])
   .css('hsl');
 
 const About = ({ data, ...props }) => (
-  <Row mt={4}>
+  <Row mt={4} mx={0}>
     <Column>
       <Container
         w={[7 / 8, theme.widths.default]}

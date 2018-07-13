@@ -47,7 +47,7 @@ class Post extends React.Component {
     }
     return (
       <div>
-        <Row mb={4} py={5} className={postTitleBGGradient}>
+        <Row mb={4} py={5} mx={0} className={postTitleBGGradient}>
           <Column />
           <Column {...postColumnStyle} my={0}>
             <Container {...postColumnStyle}>
@@ -63,7 +63,7 @@ class Post extends React.Component {
           </Column>
           <Column />
         </Row>
-        <Row mt={-3}>
+        <Row mt={-3} w={1}>
           <Column />
           <Column {...postColumnStyle}>
             <Container {...postColumnStyle}>
@@ -78,7 +78,7 @@ class Post extends React.Component {
           </Column>
           <Column />
         </Row>
-        <Row css={{ label: 'bottom-row' }}>
+        <Row css={{ label: 'bottom-row' }} w={1}>
           <Column />
           <Column {...postColumnStyle} css={{ label: 'bottom-mid-column' }}>
             <Container {...postColumnStyle} css={{ label: 'bottom-container' }}>
@@ -97,13 +97,7 @@ class Post extends React.Component {
                         opacity: 0.8,
                         cursor: 'pointer',
                       }}>
-                      <Text
-                        css={{
-                          color: theme.colors.grayScale[8],
-                          opacity: 0.5,
-                        }}
-                        mt={4}
-                        mb={3}>
+                      <Text css={{ color: theme.colors.grayScale[8], opacity: 0.5 }} mt={4} mb={3}>
                         Previous
                       </Text>
                       <MdArrowBack
@@ -128,10 +122,7 @@ class Post extends React.Component {
                         cursor: 'pointer',
                       }}>
                       <Text
-                        css={{
-                          color: theme.colors.grayScale[8],
-                          opacity: 0.5,
-                        }}
+                        css={{ color: theme.colors.grayScale[8], opacity: 0.5 }}
                         textAlign="end"
                         mt={4}
                         mb={3}>

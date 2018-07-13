@@ -23,12 +23,14 @@ const LinkText = styled(Text)(
 const headerStyles = {
   default: {
     py: ['3em'],
+    mx: [0],
     bg: '',
     className: standardHeaderBGGradient,
     css: { borderBottom: '' },
   },
   post: {
     py: [0],
+    mx: [0],
     bg: style.customColors.blueGrayFade[0],
     className: '',
     css: { borderBottom: `1px solid ${style.customColors.blueGrayFade[1]}` },
@@ -58,7 +60,6 @@ const Header = ({ location }) => {
             fontSize={isPost ? [2, 4] : [3, 4]}>
             <LinkText
               isActive={isAboutPage}
-              // className={'active'}
               pt={isPost ? ['8px', '10px'] : ['12px', '20px']}
               pb={['5px']}
               px={1}>
