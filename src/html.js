@@ -46,6 +46,13 @@ module.exports = class HTML extends React.Component {
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           {this.props.postBodyComponents}
           <script type="text/javascript" async="true" src="js/mtiFontTrackingCode.js" />
+          <script>
+            if('serviceWorker' in navigator) {
+              navigator.serviceWorker
+                .register('/sw.js')
+                .then(function () { console.log("Service Worker Registered"); });
+            }
+          </script>
         </body>
       </html>
     );
