@@ -59,7 +59,7 @@ module.exports = class HTML extends React.Component {
               src="https://www.googletagmanager.com/ns.html?id=GTM-MGKN9SS"
               height="0"
               width="0"
-              style="display:none;visibility:hidden"
+              style={{ display: 'none', visibility: 'hidden' }}
             />
           </noscript>
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
