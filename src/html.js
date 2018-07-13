@@ -23,6 +23,30 @@ module.exports = class HTML extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <link rel="manifest" href="/manifest.webmanifest" />
           <link rel="icon" href="/favicon.ico" />
+          <link
+            rel="preload"
+            href="/static/2256e07a-0135-47d0-afbd-c63fcb1d4030.woff2"
+            as="font"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/static/8436c5b3-8af1-40f9-acd7-48dfdcaeac50.woff2"
+            as="font"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/static/52382db1-3de6-473e-b9c0-3cb5e70e80a2.woff2"
+            as="font"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/static/b03c5cd2-c6ad-4764-9cab-bf6211f181a7.woff2"
+            as="font"
+            crossOrigin="anonymous"
+          />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
           <meta name="apple-mobile-web-app-title" content="Daniel Martinez" />
@@ -46,13 +70,7 @@ module.exports = class HTML extends React.Component {
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           {this.props.postBodyComponents}
           <script type="text/javascript" async="true" src="js/mtiFontTrackingCode.js" />
-          <script>
-            if('serviceWorker' in navigator) {
-              navigator.serviceWorker
-                .register('/sw.js')
-                .then(function () { console.log("Service Worker Registered"); });
-            }
-          </script>
+          <script type="text/javascript" async="true" src="/sw.js" />
         </body>
       </html>
     );

@@ -41,7 +41,7 @@ module.exports = {
         name: 'Daniel Martinez',
         short_name: 'Daniel M',
         start_url: '/',
-        background_color: '#35AFE8',
+        background_color: '#ffffff',
         theme_color: '#E1673D',
         display: 'minimal-ui',
         icon: 'src/images/portrait.png', // This path is relative to the root of the site.
