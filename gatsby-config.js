@@ -68,7 +68,6 @@ module.exports = {
       options: {
         headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
         allPageHeaders: [
-          // 'Content-Security-Policy: worker-src https://www.mdmartinez.com/',
           'Link: </icons/favicon-16x16.png>; rel=preload; as=image',
           'Link: </icons/favicon-32x32.png>; rel=preload; as=image',
           'Link: </icons/favicon-96x96.png>; rel=preload; as=image',
