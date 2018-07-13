@@ -21,6 +21,7 @@ module.exports = class HTML extends React.Component {
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <link rel="manifest" href="/manifest.webmanifest" />
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="preload"
@@ -60,7 +61,6 @@ module.exports = class HTML extends React.Component {
           <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
-          <link rel="manifest" href="/manifest.webmanifest" />
           <noscript>JavaScript must be enabled to view this site.</noscript>
           {this.props.headComponents}
           {css}
@@ -70,7 +70,7 @@ module.exports = class HTML extends React.Component {
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           {this.props.postBodyComponents}
           <script type="text/javascript" async="true" src="js/mtiFontTrackingCode.js" />
-          <script type="text/javascript" async="true" src="/sw.js" />
+          <script type="text/javascript" src="js/register-sw.js" />
         </body>
       </html>
     );
