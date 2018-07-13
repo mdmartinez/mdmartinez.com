@@ -10,7 +10,6 @@ import theme from '../theme';
 class Layout extends React.Component {
   render() {
     const { children, location, data } = this.props;
-    const isPost = location.pathname.match(/^\/posts\//) ? true : false;
     return (
       <div>
         <Helmet
