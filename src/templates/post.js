@@ -45,7 +45,6 @@ class Post extends React.Component {
     if (frontmatter.canonicalLink) {
       canonicalLink = <link rel="canonical" href={frontmatter.canonicalLink} />;
     }
-    console.log(this.props.pathContext);
     return (
       <div>
         <Row mb={4} py={5} className={postTitleBGGradient}>
