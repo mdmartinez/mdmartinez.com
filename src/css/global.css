@@ -1,13 +1,15 @@
 @font-face {
     font-family: "DIN Next Rounded LT";
+    font-display: fallback;
     font-weight: 400;
-    src: url("../fonts/8436c5b3-8af1-40f9-acd7-48dfdcaeac50.woff2") format("woff2"), url("../fonts/b03c5cd2-c6ad-4764-9cab-bf6211f181a7.woff") format("woff")
+    src: local('DIN Next Rounded LT'), url("../fonts/8436c5b3-8af1-40f9-acd7-48dfdcaeac50.woff2") format("woff2"), url("../fonts/b03c5cd2-c6ad-4764-9cab-bf6211f181a7.woff") format("woff")
 }
 
 @font-face {
     font-family: "DIN Next Rounded LT";
+    font-display: fallback;
     font-weight: 700;
-    src: url("../fonts/2256e07a-0135-47d0-afbd-c63fcb1d4030.woff2") format("woff2"), url("../fonts/52382db1-3de6-473e-b9c0-3cb5e70e80a2.woff") format("woff")
+    src: local('DIN Next Rounded LT'), url("../fonts/2256e07a-0135-47d0-afbd-c63fcb1d4030.woff2") format("woff2"), url("../fonts/52382db1-3de6-473e-b9c0-3cb5e70e80a2.woff") format("woff")
 }
 
 :root {
