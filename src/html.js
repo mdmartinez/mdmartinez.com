@@ -46,20 +46,13 @@ module.exports = class HTML extends React.Component {
             as="font"
             crossOrigin="anonymous"
           />
-          <script type="text/javascript" src="js/google-tag-manager.js" />
+
           {this.props.headComponents}
           {css}
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
-          <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-MGKN9SS"
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-            />
-          </noscript>
+
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           {this.props.postBodyComponents}
           <script type="text/javascript" async="true" src="js/mtiFontTrackingCode.js" />
