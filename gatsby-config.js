@@ -18,9 +18,29 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-autolink-headers`],
+      },
+    },
     'gatsby-plugin-twitter',
     'gatsby-plugin-remove-trailing-slashes',
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#35AFE8`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.mdmartinez.com`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-emotion',
       options: {
