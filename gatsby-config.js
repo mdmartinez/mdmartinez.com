@@ -62,6 +62,20 @@ module.exports = {
         // exclude: ['/preview/**', '/do-not-track/me/too/'],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: 'GTM-MGKN9SS',
+
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+
+        // Specify optional GTM environment details.
+        gtmAuth: 'YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING',
+        gtmPreview: 'YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME',
+      },
+    },
     'gatsby-plugin-netlify-cache',
     {
       resolve: `gatsby-plugin-netlify`,

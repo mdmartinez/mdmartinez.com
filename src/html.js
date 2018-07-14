@@ -22,8 +22,6 @@ module.exports = class HTML extends React.Component {
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <link rel="icon" href="/favicon.ico" />
-          <link rel="manifest" href="/manifest.webmanifest" />
-          <meta name="theme-color" content="#35AFE8" />
           <link
             rel="preload"
             href="/static/2256e07a-0135-47d0-afbd-c63fcb1d4030.woff2"
