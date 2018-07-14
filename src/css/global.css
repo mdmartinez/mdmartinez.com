@@ -60,8 +60,8 @@ html {
     -webkit-text-size-adjust: 100%;
     -moz-tab-size: 4;
     tab-size: 4;
-    overflow-y: scroll;
-    overflow-x: scroll;
+    overflow-y: auto;
+    overflow-x: auto;
     font-size: var(--default-font-size);
 }
 
@@ -71,8 +71,8 @@ body {
     line-height: var(--default-line-height);
     color: var(--body-color);
     font-weight: normal;
-    word-wrap: break-word;
-    /* word-break: break-all; */
+    word-wrap: normal;
+    /* word-break: normal; */
     font-kerning: normal;
     -moz-font-feature-settings: "kern", "liga", "clig", "calt";
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
