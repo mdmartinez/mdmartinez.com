@@ -101,7 +101,6 @@ export default class EmailCaptureForm extends React.Component {
             <Alert
               backgroundColor={theme.colors.greens[0]}
               hoverColor={theme.colors.oranges[0]}
-              closeButtonPosition="110px"
               children="Please enter an email."
               toggleHandler={this._toggleNotification}
             />
