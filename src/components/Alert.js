@@ -21,12 +21,12 @@ const Alert = ({
           css={{
             position: 'relative',
             left: '10px',
-            bottom: '14px',
+            bottom: '18px',
             cursor: 'pointer',
             '&:hover': { color: hoverColor },
             '&:focus': { color: 'white' },
           }}
-          mb={3}
+          pb={3}
           onClick={toggleHandler}
         />
       </Box>
