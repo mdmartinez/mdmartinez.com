@@ -15,7 +15,7 @@ class Layout extends React.Component {
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Making light of the obvious and the ordinary' },
+            { name: 'description', content: data.site.siteMetadata.description },
             {
               name: 'keywords',
               content: 'experience, human, obvious, ordinary, meaningful, fulfillment',

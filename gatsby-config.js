@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Daniel Martinez',
+    description: `Making light of the obvious and the ordinary`,
+    siteUrl: `https://www.mdmartinez.com`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -24,6 +26,10 @@ module.exports = {
         plugins: [`gatsby-remark-autolink-headers`],
       },
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-feed',
+    'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
     'gatsby-plugin-remove-trailing-slashes',
     {
