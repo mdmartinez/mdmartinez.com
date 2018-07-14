@@ -19,6 +19,7 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
+    'gatsby-plugin-twitter',
     'gatsby-plugin-remove-trailing-slashes',
     {
       resolve: 'gatsby-plugin-emotion',
