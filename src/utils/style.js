@@ -16,7 +16,7 @@ const style = {
     newsletter: `inset 0 0 0 1px ${chroma(theme.colors.blueGrayScale[5])
       .alpha(0.4)
       .css('hsl')}`,
-    newsletterFocus: `inset 0 0 0 2px ${theme.colors.blues[0]}, 0 0 8px ${theme.colors.blues[0]}`,
+    newsletterFocus: `inset 0 0 0 1px ${theme.colors.blues[0]}, 0 0 4px ${theme.colors.blues[0]}`,
     success: `inset 0 0 0 2px ${theme.colors.greens[0]}, 0 0 8px ${theme.colors.greens[0]}`,
     error: `inset 0 0 0 2px ${theme.colors.blues[0]}, 0 0 8px ${theme.colors.blues[0]}`,
   },
