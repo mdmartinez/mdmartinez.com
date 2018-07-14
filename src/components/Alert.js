@@ -1,11 +1,10 @@
 import React from 'react';
-import { Message, Close } from 'rebass/emotion';
+import { Message, Close, Flex, Box, Text } from 'rebass/emotion';
 import theme from '../theme';
 
 const Alert = ({
   backgroundColor,
   hoverColor = theme.colors.oranges[5],
-  closeButtonPosition = '10px',
   children,
   toggleHandler,
 }) => (
@@ -15,18 +14,23 @@ const Alert = ({
     bg={backgroundColor}
     fontSize={[1, 2]}
     color={'white'}>
-    {children}
-    <Close
-      css={{
-        position: 'relative',
-        left: closeButtonPosition,
-        bottom: '14px',
-        cursor: 'pointer',
-        '&:hover': { color: hoverColor },
-      }}
-      mb={3}
-      onClick={toggleHandler}
-    />
+    <Flex w={1} alignItems="center" justifyContent="space-between">
+      <Text>{children}</Text>
+      <Box>
+        <Close
+          css={{
+            position: 'relative',
+            left: '10px',
+            bottom: '14px',
+            cursor: 'pointer',
+            '&:hover': { color: hoverColor },
+            '&:focus': { color: 'white' },
+          }}
+          mb={3}
+          onClick={toggleHandler}
+        />
+      </Box>
+    </Flex>
   </Message>
 );
 
