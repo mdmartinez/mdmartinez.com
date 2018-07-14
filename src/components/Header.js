@@ -47,7 +47,8 @@ const Header = ({ location }) => {
         <Toolbar bg="transparent">
           <NavLink
             onClick={() => navigateTo('/')}
-            pl={isPost ? [3, 4] : [4]}
+            pl={isPost ? [0, 4] : [4]}
+            ml={isPost ? [-2, -3] : [-3]}
             color={theme.colors.blueGrayScale[8]}
             css={{ fontFamily: theme.fonts.display }}
             fontSize={isPost ? [4, '40px', 6] : [5, '40px', 6]}>
@@ -56,11 +57,11 @@ const Header = ({ location }) => {
           <NavLink
             onClick={() => navigateTo('/about')}
             ml="auto"
-            mr={2}
+            mr={isPost ? [-2, 0] : [-3, 0]}
             fontSize={isPost ? [2, 4] : [3, 4]}>
             <LinkText
               isActive={isAboutPage}
-              pt={isPost ? ['8px', '10px'] : ['12px', '20px']}
+              pt={isPost ? ['15px'] : ['15px', '20px']}
               pb={['5px']}
               px={1}>
               about
