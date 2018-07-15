@@ -1,6 +1,7 @@
 ---
 title: A Note About This Place
 date: 2018-07-01
+excerpt: The memory palace
 ---
 
 This place is a memory of myself.

@@ -4,15 +4,9 @@ import { css } from 'react-emotion';
 
 const style = {
   shadows: {
-    indexPost: `inset 0 0 0 1px ${theme.colors.blueGrayScale[1]}, 0 0 4px ${
-      theme.colors.blueGrayScale[1]
-    }`,
-    low: `inset 0 0 0 1px ${theme.colors.blueGrayScale[1]}, 0 2px 4px ${
-      theme.colors.blueGrayScale[1]
-    }`,
-    high: `inset 0 0 0 1px ${theme.colors.blueGrayScale[1]}, 0 4px 15px ${
-      theme.colors.blueGrayScale[1]
-    }`,
+    indexPost: `inset 0 0 0 1px ${theme.colors.blueGrayScale[1]}, 0 0 4px ${theme.colors.blueGrayScale[1]}`,
+    low: `inset 0 0 0 1px ${theme.colors.blueGrayScale[1]}, 0 2px 4px ${theme.colors.blueGrayScale[1]}`,
+    high: `inset 0 0 0 1px ${theme.colors.blueGrayScale[1]}, 0 4px 15px ${theme.colors.blueGrayScale[1]}`,
     newsletter: `inset 0 0 0 1px ${chroma(theme.colors.blueGrayScale[5])
       .alpha(0.4)
       .css('hsl')}`,
@@ -120,6 +114,8 @@ const headerGradientStops = [
 ];
 
 export { default as openColors } from 'open-color';
+
+export { default as chroma } from 'chroma-js';
 
 export const postTitleBGGradient = css({
   background: `linear-gradient(to bottom, ${postGradientStops.join('')})`,
