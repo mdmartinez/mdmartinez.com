@@ -41,10 +41,6 @@ class Post extends React.Component {
       mx: [0, 'auto'],
     };
 
-    let canonicalLink;
-    if (frontmatter.canonicalLink) {
-      canonicalLink = <link rel="canonical" href={frontmatter.canonicalLink} />;
-    }
     return (
       <div>
         <Row mb={4} py={5} mx={0} className={postTitleBGGradient}>
