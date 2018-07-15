@@ -1,10 +1,6 @@
 const theme = {
   breakpoints: ['32em', '48em', '64em', '80em'],
-  fonts: {
-    display: '"DIN Next Rounded LT", "Helvetica Neue", system-ui, sans-serif',
-    sans: '"Avenir Next","Fira Sans", "Helvetica Neue", system-ui, sans-serif',
-    mono: '"Fira Code", "SF Mono", "Roboto Mono", Menlo, monospace',
-  },
+  space: [0, 4, 8, 16, 32, 64, 128, 156, 188, 220, 256],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72, 96],
   lineHeights: [1.2, 1.3, 1.4, 1.5],
   fontWeights: {
@@ -12,6 +8,11 @@ const theme = {
     normal: 400,
     demi: 600,
     bold: 700,
+  },
+  fonts: {
+    display: '"DIN Next Rounded LT", "Helvetica Neue", system-ui, sans-serif',
+    sans: '"Avenir Next","Fira Sans", "Helvetica Neue", system-ui, sans-serif',
+    mono: '"Fira Code", "SF Mono", "Roboto Mono", Menlo, monospace',
   },
   colors: {
     greens: [
@@ -94,7 +95,7 @@ const theme = {
   widths: {
     default: 4 / 7,
   },
-  space: [0, 4, 8, 16, 32, 64, 128, 156, 188, 220, 256],
+
   maxWidths: ['32em'],
   radii: [0, 2, 4, 8, 16, 32],
   shadows: [
