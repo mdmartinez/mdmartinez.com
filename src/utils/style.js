@@ -119,6 +119,8 @@ const headerGradientStops = [
     .css('hsl')} 100%`,
 ];
 
+export { default as openColors } from 'open-color';
+
 export const postTitleBGGradient = css({
   background: `linear-gradient(to bottom, ${postGradientStops.join('')})`,
 });
