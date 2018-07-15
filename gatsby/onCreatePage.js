@@ -1,5 +1,5 @@
-module.exports = exports.onCreatePage = async ({ page, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+module.exports = exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage } = actions;
 
   return new Promise(resolve => {
     if (page.path.match(/^\/experiments/)) {

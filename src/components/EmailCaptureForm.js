@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import { Input, Button, Label, Text } from 'rebass/emotion';
 import Alert from './Alert';
@@ -76,16 +76,17 @@ export default class EmailCaptureForm extends React.Component {
 
   render() {
     const { email, status, notification, msg } = this.state;
-    const re = RegExp('https[^>]*', 'gi');
-    const updateLink = msg.match(re) && msg.match(re).join('');
-    const fixedLink = updateLink && updateLink.slice(0, updateLink.length - 1);
-    const updateHTML = fixedLink && `you can update your profile <a href=${fixedLink}>here</a>`;
+    // TODO add update profile option to alert
+    // const re = RegExp('https[^>]*', 'gi');
+    // const updateLink = msg.match(re) && msg.match(re).join('');
+    // const fixedLink = updateLink && updateLink.slice(0, updateLink.length - 1);
+    // const updateHTML = fixedLink && `you can update your profile <a href=${fixedLink}>here</a>`;
     const blankEmail = email === '' && !msg && notification;
     const alreadySubscribed = status === 'error' && notification && msg.includes('already');
     const error = status === 'error' && notification && !msg.includes('already');
     const success = status === 'success' && notification;
     return (
-      <div>
+      <Fragment>
         <form
           css={{ display: 'flex', flexWrap: 'wrap' }}
           id="email-capture"
@@ -93,9 +94,7 @@ export default class EmailCaptureForm extends React.Component {
           autoComplete
           onSubmit={this._handleSubmit}>
           <Label py={3} for="email">
-            <Text fontSize={['17px', 3]}>
-              Enjoyed this post? Receive the next one in your inbox!
-            </Text>
+            <Text fontSize={['17px', 3]}>Enjoyed this post? Receive the next one in your inbox!</Text>
           </Label>
           {blankEmail && (
             <Alert
@@ -161,7 +160,7 @@ export default class EmailCaptureForm extends React.Component {
             children="Subscribe"
           />
         </form>
-      </div>
+      </Fragment>
     );
   }
 }

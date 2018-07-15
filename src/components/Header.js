@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { navigateTo } from 'gatsby-link';
+import { push } from 'gatsby';
 import { Row, Column, Toolbar, NavLink, Text } from 'rebass/emotion';
 import styled from 'react-emotion';
 import theme from '../theme';
@@ -46,7 +46,7 @@ const Header = ({ location }) => {
       <Column mb={0}>
         <Toolbar bg="transparent">
           <NavLink
-            onClick={() => navigateTo('/')}
+            onClick={() => push('/')}
             pl={isPost ? [0, 4] : [4]}
             ml={isPost ? [-2, -3] : [-3]}
             color={theme.colors.blueGrayScale[8]}
@@ -55,15 +55,11 @@ const Header = ({ location }) => {
             Daniel Martinez
           </NavLink>
           <NavLink
-            onClick={() => navigateTo('/about')}
+            onClick={() => push('/about')}
             ml="auto"
             mr={isPost ? [-2, 0] : [-3, 0]}
             fontSize={isPost ? [2, 4] : [3, 4]}>
-            <LinkText
-              isActive={isAboutPage}
-              pt={isPost ? ['15px'] : ['15px', '20px']}
-              pb={['5px']}
-              px={1}>
+            <LinkText isActive={isAboutPage} pt={isPost ? ['15px'] : ['15px', '20px']} pb={['5px']} px={1}>
               about
             </LinkText>
           </NavLink>

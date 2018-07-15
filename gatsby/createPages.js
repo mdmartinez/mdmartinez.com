@@ -1,7 +1,7 @@
 const path = require('path');
 
-module.exports = async ({ graphql, boundActionCreators }) => {
-  const { createPage, createRedirect } = boundActionCreators;
+module.exports = async ({ graphql, actions }) => {
+  const { createPage, createRedirect } = actions;
 
   const blogPostTemplate = path.resolve('src/templates/post.js');
 

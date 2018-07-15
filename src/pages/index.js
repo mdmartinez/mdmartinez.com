@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { navigateTo } from 'gatsby-link';
+import { graphql, push } from 'gatsby';
+import Layout from '../components/layout';
 import { Row, Column, Container, Card, Heading } from 'rebass/emotion';
 import styled from 'react-emotion';
 import theme from '../theme';
@@ -23,29 +24,31 @@ const PostCard = styled(Card)({
 });
 
 const IndexPage = ({ data, ...props }) => (
-  <Row mt={4} mx={0}>
-    <Column>
-      <Container w={[13 / 14, theme.widths.default]}>
-        {data.blogPages.edges.map(({ blogPost }) => (
-          <PostCard
-            py={5}
-            mb={4}
-            boxShadow={3}
-            borderRadius={2}
-            key={blogPost.id}
-            onClick={() => navigateTo(blogPost.fields.slug)}>
-            <Heading
-              textAlign={'center'}
-              fontSize={[3, 4]}
-              color={theme.colors.blueGrayScale[7]}
-              css={{ fontFamily: theme.fonts.display }}>
-              {blogPost.frontmatter.title}
-            </Heading>
-          </PostCard>
-        ))}
-      </Container>
-    </Column>
-  </Row>
+  <Layout location={props.location}>
+    <Row mt={4} mx={0}>
+      <Column>
+        <Container w={[13 / 14, theme.widths.default]}>
+          {data.blogPosts.edges.map(({ blogPost }) => (
+            <PostCard
+              py={5}
+              mb={4}
+              boxShadow={3}
+              borderRadius={2}
+              key={blogPost.id}
+              onClick={() => push(blogPost.fields.slug)}>
+              <Heading
+                textAlign={'center'}
+                fontSize={[3, 4]}
+                color={theme.colors.blueGrayScale[7]}
+                css={{ fontFamily: theme.fonts.display }}>
+                {blogPost.frontmatter.title}
+              </Heading>
+            </PostCard>
+          ))}
+        </Container>
+      </Column>
+    </Row>
+  </Layout>
 );
 
 IndexPage.propTypes = {
@@ -55,8 +58,8 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const query = graphql`
-  query AllBlogPostsQuery {
-    blogPages: allMarkdownRemark(
+  {
+    blogPosts: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "//content/posts//" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
