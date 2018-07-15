@@ -244,7 +244,7 @@ kbd,
 pre,
 samp {
     font-family: monospace, monospace;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 figure {
@@ -454,7 +454,7 @@ pre {
     padding-right: 0;
     padding-top: 0;
     margin-bottom: var(--default-margin);
-    font-size: 0.85rem;
+    font-size: 1rem;
     line-height: 1.42;
     background: hsla(0, 0%, 0%, 0.04);
     border-radius: 3px;

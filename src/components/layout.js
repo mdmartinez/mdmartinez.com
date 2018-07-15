@@ -6,6 +6,7 @@ import { Provider } from 'rebass/emotion';
 import Header from '../components/Header';
 import 'typeface-fira-sans';
 import '../css/global.css';
+import '../css/prism-solarizedlight.css';
 import theme from '../theme';
 
 class Layout extends React.Component {
