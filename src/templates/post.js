@@ -68,19 +68,19 @@ class Post extends React.Component {
                   mb={0}
                   ml={[0, -4]}
                   fontSize={[5, 5, 5, 6]}
-                  css={{ fontFamily: theme.fonts.display }}>
+                  css={{ textTransform: 'capitalize', fontFamily: theme.fonts.display }}>
                   {frontmatter.title}
                 </Heading>
               </Container>
             </Column>
-            <Column px={[2, 4]} />
+            <Column px={[0, 0, 4]} />
           </Row>
           <Row mt={-3} mx={0} w={1}>
             <Column px={[2, 3]} />
             <Column {...postColumnStyle}>
               <Container {...postColumnStyle}>
                 <Measure
-                  maxWidth={['42em']}
+                  maxWidth={['26.7em', '42em']}
                   fontSize={['17px', '17px', '17px', 3]}
                   lineHeight={1}
                   css={{ color: theme.colors.grayScale[8] }}
@@ -91,18 +91,29 @@ class Post extends React.Component {
                 <Divider borderBottom={2} borderColor={style.customColors.blueGrayFade[1]} />
                 <EmailCaptureForm />
                 <Flex justifyContent="space-between" css={{ label: 'flex-nav-container' }}>
-                  <Box>
+                  <Box pr={2}>
                     {prev && (
                       <Link
                         onClick={() => push(prev.fields.slug)}
                         className={animatedUnderline}
                         css={{
                           fontWeight: '600',
+                          textTransform: 'capitalize',
+                          maxWidth: '5px',
+                          width: '100%',
                           color: theme.colors.grayScale[8],
                           opacity: 0.8,
                           cursor: 'pointer',
                         }}>
-                        <Text css={{ color: theme.colors.grayScale[8], opacity: 0.5 }} mt={4} mb={3}>
+                        <Text
+                          css={{
+                            color: theme.colors.grayScale[8],
+                            textTransform: 'capitalize',
+                            maxWidth: '8px',
+                            opacity: 0.5,
+                          }}
+                          mt={4}
+                          mb={3}>
                           Previous
                         </Text>
                         <MdArrowBack
@@ -114,13 +125,15 @@ class Post extends React.Component {
                       </Link>
                     )}
                   </Box>
-                  <Box>
+                  <Box css={{ textAlign: 'end' }}>
                     {next && (
                       <Link
                         onClick={() => push(next.fields.slug)}
                         className={animatedUnderline}
                         css={{
                           fontWeight: '600',
+                          textTransform: 'capitalize',
+                          maxWidth: '3em',
                           color: theme.colors.grayScale[8],
                           opacity: 0.8,
                           cursor: 'pointer',

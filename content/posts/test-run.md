@@ -4,7 +4,7 @@ title: Just another Sunday
 
 Some amazing JS right here.
 
-```javascript
+```javascript{4}
 // In your gatsby-config.js
 plugins: [
   {
