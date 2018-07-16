@@ -7,7 +7,16 @@ import MdArrowBack from 'react-icons/lib/md/arrow-back';
 import EmailCaptureForm from '../components/EmailCaptureForm';
 import Layout from '../components/layout';
 import style, { postTitleBGGradient, animatedUnderline } from '../utils/style';
+import { css } from 'react-emotion';
 import theme from '../theme';
+
+const overflowAdjustment = css`
+  ${style.mediaQueries.Phablet} {
+    && {
+      overflow-x: hidden;
+    }
+  }
+`;
 
 class Post extends React.Component {
   render() {
@@ -68,13 +77,14 @@ class Post extends React.Component {
         </Row>
         <Row mt={-3} mx={0} w={1}>
           <Column px={[2, 3]} />
-          <Column {...postColumnStyle} css={{ overflowX: 'hidden' }}>
+          <Column {...postColumnStyle} className={overflowAdjustment}>
             <Container {...postColumnStyle}>
               <Measure
                 maxWidth={['42em']}
                 fontSize={['17px', '17px', '17px', 3]}
                 lineHeight={1}
-                css={{ color: theme.colors.grayScale[8], overflowX: 'scroll' }}
+                className={overflowAdjustment}
+                css={{ color: theme.colors.grayScale[8] }}
                 dangerouslySetInnerHTML={{ __html: html }}
               />
             </Container>
@@ -170,7 +180,6 @@ export const query = graphql`
         title
         date(formatString: "MMMM Do, YYYY")
         rawDate: date
-        draft
         excerpt
         canonicalLink
         tags

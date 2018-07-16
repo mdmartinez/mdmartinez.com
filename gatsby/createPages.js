@@ -29,7 +29,6 @@ module.exports = async ({ graphql, actions }) => {
               frontmatter {
                 title
                 date
-                draft
                 canonicalLink
                 tags
               }

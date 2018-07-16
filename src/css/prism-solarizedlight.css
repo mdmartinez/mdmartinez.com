@@ -209,10 +209,19 @@ pre[class*="language-"] {
 .gatsby-highlight pre code {
     font-size: 0.95rem;
     overflow-x: scroll;
+    padding-bottom: 2px;
 }
 
 .gatsby-highlight+p {
     overflow-x: scroll;
+    padding-bottom: 2px;
+}
+
+@media (min-width: 550px) {
+    .gatsby-highlight+p {
+        overflow-x: hidden;
+        padding-bottom: 0px;
+    }
 }
 
 .gatsby-highlight+p code {
@@ -224,7 +233,7 @@ pre[class*="language-"] {
     height: 6px;
 }
 
-*/ .gatsby-highlight+p::-webkit-scrollbar-thumb {
+.gatsby-highlight+p::-webkit-scrollbar-thumb {
     background: #f4d1c6;
 }
 

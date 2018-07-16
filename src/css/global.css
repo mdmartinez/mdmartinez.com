@@ -12,6 +12,12 @@
     src: local('DIN Next Rounded LT'), url("../fonts/2256e07a-0135-47d0-afbd-c63fcb1d4030.woff2") format("woff2"), url("../fonts/52382db1-3de6-473e-b9c0-3cb5e70e80a2.woff") format("woff")
 }
 
+@media (min-width: 65px) {
+    .floop {
+        background: blue;
+    }
+}
+
 :root {
     --default-font: "Fira Sans", "Helvetica Neue", system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
@@ -458,7 +464,7 @@ pre {
     line-height: 1.42;
     background: hsla(0, 0%, 0%, 0.04);
     border-radius: 3px;
-    overflow: auto;
+    /* overflow: auto; */
     word-wrap: normal;
     padding: 1.45rem;
 }
