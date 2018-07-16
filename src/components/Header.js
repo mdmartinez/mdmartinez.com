@@ -57,7 +57,7 @@ const Header = ({ location }) => {
           <NavLink
             onClick={() => push('/about')}
             ml="auto"
-            mr={isPost ? [-2, 0] : [-3, 0]}
+            mr={isPost ? [-3, 0] : [-3, 0]}
             fontSize={isPost ? [2, 4] : [3, 4]}>
             <LinkText isActive={isAboutPage} pt={isPost ? ['15px'] : ['15px', '20px']} pb={['5px']} px={1}>
               about
