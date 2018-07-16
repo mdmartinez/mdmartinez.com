@@ -80,7 +80,7 @@ class Post extends React.Component {
             <Column {...postColumnStyle}>
               <Container {...postColumnStyle}>
                 <Measure
-                  maxWidth={['26.7em', '42em']}
+                  maxWidth={['20.7em', '26.7em', '42em']}
                   fontSize={['17px', '17px', '17px', 3]}
                   lineHeight={1}
                   css={{ color: theme.colors.grayScale[8] }}
