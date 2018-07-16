@@ -32,6 +32,7 @@ module.exports = {
         ],
       },
     },
+    // 'gatsby-transformer-screenshot',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-feed',
