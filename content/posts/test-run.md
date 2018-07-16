@@ -44,4 +44,5 @@ plugins: [
 ]
 ```
 
+
 I can highlight `css±.some-class { background-color: red }` with CSS syntax.
