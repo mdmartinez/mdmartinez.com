@@ -32,6 +32,7 @@ export default class HTML extends React.Component {
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           {this.props.postBodyComponents}
           <script type="text/javascript" async="true" src="js/mtiFontTrackingCode.js" />
+          <script type="text/javascript" async="true" src="js/heap.js" />
           <script type="text/javascript" src="js/register-sw.js" />
         </body>
       </html>
