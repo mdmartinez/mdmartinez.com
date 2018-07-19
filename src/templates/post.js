@@ -88,7 +88,7 @@ class Post extends React.Component {
                 dangerouslySetInnerHTML={{ __html: html }}
               />
             </Container>
-            <Container {...postColumnStyle} pt={3} css={{ label: 'bottom-container' }}>
+            <Container {...postColumnStyle} pt={5} css={{ label: 'bottom-container' }}>
               <Divider borderBottom={2} borderColor={style.customColors.blueGrayFade[1]} />
               <EmailCaptureForm />
               <Flex justifyContent="space-between" css={{ label: 'flex-nav-container' }}>
