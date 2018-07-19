@@ -136,7 +136,7 @@ export default class EmailCaptureForm extends React.Component {
             placeholder="you@email.com"
             required
           />
-          <div css={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+          <div css={{ visibility: 'hidden', position: 'absolute', left: '-5000px' }} aria-hidden="true">
             <input
               type="text"
               name="b_d2ba54848ea37cc4b8252f551_5f96d69b04"
