@@ -18,10 +18,14 @@
     }
 }
 
+.async-hide {
+    opacity: 0 !important;
+}
+
 :root {
     --default-font: "Fira Sans", "Helvetica Neue", system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
-    --fallback-fonts: -apple-system,
+    /* --fallback-fonts: -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     Roboto,
@@ -36,16 +40,12 @@
     sans-serif,
     'Apple Color Emoji',
     'Segoe UI Emoji',
-    'Segoe UI Symbol';
+    'Segoe UI Symbol'; */
     --fallback-monospaced-fonts: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
     --default-font-size: 16px;
     --default-line-height: 1.3;
     --default-margin: 1.45rem;
     --body-color: hsla(0, 0%, 0%, 0.8);
-    --dark-gray: hsla(0, 0%, 20%, 0.8);
-    --light-blue: hsla(197, 100%, 65%, 0.3);
-    --medium-blue: hsla(199, 80%, 56%, 1);
-    --light-yellow: hsla(60, 100%, 75%, 0.7);
 }
 
 *,
