@@ -53,18 +53,11 @@
     background-repeat: no-repeat;
 }
 
-/* ::selection {
+::selection {
     background-color: var(--light-blue);
     text-shadow: none;
     color: var(--medium-blue);
-} */
-
-/* 
-::-moz-selection {
-    background-color: var(--light-blue);
-    text-shadow: none;
-    color: var(--medium-blue);
-} */
+}
 
 html {
     -ms-text-size-adjust: 100%;
