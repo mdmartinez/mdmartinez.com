@@ -18,10 +18,6 @@
     }
 }
 
-.async-hide {
-    opacity: 0 !important;
-}
-
 :root {
     --default-font: "Fira Sans", "Helvetica Neue", system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
