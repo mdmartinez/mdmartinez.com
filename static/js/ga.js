@@ -21,7 +21,7 @@ if (!(navigator.doNotTrack == '1' || window.doNotTrack == '1')) {
   })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 }
 if (typeof ga === 'function') {
-  // ga('create', 'UA-68492200-1', 'auto');
-  // ga('require', 'GTM-MR5DMHT');
+  ga('create', 'UA-68492200-1', 'auto');
+  ga('require', 'GTM-MR5DMHT');
   // ga('set', 'anonymizeIp', 1);
 }

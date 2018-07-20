@@ -42,6 +42,8 @@
     --default-line-height: 1.3;
     --default-margin: 1.45rem;
     --body-color: hsla(0, 0%, 0%, 0.8);
+    --light-blue: hsla(197, 100%, 65%, 0.3);
+    --medium-blue: hsla(199, 80%, 56%, 1);
 }
 
 *,
@@ -51,11 +53,18 @@
     background-repeat: no-repeat;
 }
 
-::selection {
+/* ::selection {
     background-color: var(--light-blue);
     text-shadow: none;
     color: var(--medium-blue);
-}
+} */
+
+/* 
+::-moz-selection {
+    background-color: var(--light-blue);
+    text-shadow: none;
+    color: var(--medium-blue);
+} */
 
 html {
     -ms-text-size-adjust: 100%;
