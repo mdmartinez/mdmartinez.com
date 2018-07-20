@@ -36,6 +36,7 @@ export default class HTML extends React.Component {
           <script type="text/javascript" async="true" src="js/olark.js" />
           <script type="text/javascript" async="true" src="js/mtiFontTrackingCode.js" />
           <script type="text/javascript" async="true" src="js/heap.js" />
+          <script type="text/javascript" async="true" src="js/hj.js" />
           <script type="text/javascript" src="js/register-sw.js" />
         </body>
       </html>
