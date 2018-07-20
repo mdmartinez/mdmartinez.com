@@ -82,12 +82,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    // {
-    //   resolve: `gatsby-plugin-fullstory`,
-    //   options: {
-    //     fs_org: 'DA1Z2',
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-fullstory`,
+      options: {
+        fs_org: 'DA1Z2',
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
