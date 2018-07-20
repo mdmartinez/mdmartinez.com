@@ -23,8 +23,7 @@ export default class HTML extends React.Component {
           <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
-          <script type="text/javascript" async="true" src="js/ga.js" />
-          <script type="text/javascript" async="true" src="js/mp.js" />
+
           <noscript>JavaScript must be enabled to view this site.</noscript>
           {this.props.headComponents}
         </head>
@@ -33,10 +32,15 @@ export default class HTML extends React.Component {
 
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           {this.props.postBodyComponents}
-          <script type="text/javascript" async="true" src="js/olark.js" />
+          {/* <script type="text/javascript" async="true" src="js/ga.js" /> */}
+          {/* <script type="text/javascript" async="true" src="js/seg.js" /> */}
+          {/* <script type="text/javascript" async="true" src="js/mp.js" /> */}
+          {/* <script type="text/javascript" async="true" src="js/am.js" /> */}
+          {/* <script type="text/javascript" async="true" src="js/heap.js" /> */}
+          {/* <script type="text/javascript" async="true" src="js/ins.js" /> */}
+          {/* <script type="text/javascript" async="true" src="js/hj.js" /> */}
+          {/* <script type="text/javascript" async="true" src="js/olark.js" /> */}
           <script type="text/javascript" async="true" src="js/mtiFontTrackingCode.js" />
-          <script type="text/javascript" async="true" src="js/heap.js" />
-          <script type="text/javascript" async="true" src="js/hj.js" />
           <script type="text/javascript" src="js/register-sw.js" />
         </body>
       </html>
