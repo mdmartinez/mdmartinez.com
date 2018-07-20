@@ -11,7 +11,7 @@ import theme from '../theme';
 
 class Layout extends React.Component {
   render() {
-    const { children, location } = this.props;
+    const { children, location } = this.propsasdf;
     return (
       <StaticQuery
         query={graphql`

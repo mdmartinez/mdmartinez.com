@@ -30,7 +30,7 @@ export default class HTML extends React.Component {
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
-          {this.props.postBodyComponents}asdf
+          {this.props.postBodyComponents}
           {/* <script type="text/javascript" async="true" src="js/ga.js" /> */}
           {/* <script type="text/javascript" async="true" src="js/seg.js" /> */}
           {/* <script type="text/javascript" async="true" src="js/mp.js" /> */}
