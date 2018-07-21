@@ -68,7 +68,7 @@ class Post extends React.Component {
                 mb={0}
                 ml={[0, -4]}
                 fontSize={[5, 5, 5, 6]}
-                css={{ textTransform: 'capitalize', fontFamily: theme.fonts.display }}>
+                css={{ width: '15em', textTransform: 'capitalize', fontFamily: theme.fonts.display }}>
                 {frontmatter.title}
               </Heading>
             </Container>
@@ -82,7 +82,7 @@ class Post extends React.Component {
               <Measure
                 maxWidth={['42em']}
                 fontSize={['17px', '17px', '17px', 3]}
-                lineHeight={1}
+                lineHeight={'1.53'}
                 className={overflowAdjustment}
                 css={{ color: theme.colors.grayScale[8] }}
                 dangerouslySetInnerHTML={{ __html: html }}
