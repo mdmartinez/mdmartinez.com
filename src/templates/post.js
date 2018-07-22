@@ -62,13 +62,17 @@ class Post extends React.Component {
         <Row mb={4} py={5} mx={0} className={postTitleBGGradient}>
           <Column px={[2, 4]} css={{ label: 'top-left-column' }} />
           <Column {...postColumnStyle} my={0} css={{ label: 'top-mid-column' }}>
-            <Container {...postColumnStyle} css={{ label: 'top-mid-container' }}>
+            <Container
+              w={[1, '26em', '32em', '43em']}
+              px={['auto']}
+              mx={['auto', '7em']}
+              css={{ label: 'top-mid-container' }}>
               <Heading
                 color={theme.colors.blueGrayScale[7]}
                 mb={0}
                 ml={[0, -4]}
                 fontSize={[5, 5, 5, 6]}
-                css={{ width: '15em', textTransform: 'capitalize', fontFamily: theme.fonts.display }}>
+                css={{ textTransform: 'capitalize', fontFamily: theme.fonts.display }}>
                 {frontmatter.title}
               </Heading>
             </Container>
