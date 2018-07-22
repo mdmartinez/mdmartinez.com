@@ -63,14 +63,14 @@ class Post extends React.Component {
           <Column px={[2, 4]} css={{ label: 'top-left-column' }} />
           <Column {...postColumnStyle} my={0} css={{ label: 'top-mid-column' }}>
             <Container
-              w={[1, '26em', '32em', '43em']}
+              w={[1, '26em', '32em', '48em']}
               px={['auto']}
-              mx={['auto', '7em']}
+              mx={['auto']}
               css={{ label: 'top-mid-container' }}>
               <Heading
                 color={theme.colors.blueGrayScale[7]}
                 mb={0}
-                ml={[0, -4]}
+                ml={[0, 0, -2, '24px']}
                 fontSize={[5, 5, 5, 6]}
                 css={{ textTransform: 'capitalize', fontFamily: theme.fonts.display }}>
                 {frontmatter.title}

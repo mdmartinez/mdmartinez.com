@@ -242,17 +242,6 @@ pre[class*="language-"] {
     border-radius: 0 0 4px 4px;
 }
 
-/* *::-webkit-scrollbar {
-    width: 12px;
-} */
-
-/* *:-webkit-scrollbar-thumb {
-    background: #925340;
-} */
-
-/* *::-webkit-scrollbar-track {
-    background: #8f4e26;
-} */
 
 /**
  * Remove the default PrismJS theme background-color, border-radius, margin,
