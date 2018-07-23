@@ -23,5 +23,4 @@ if (!(navigator.doNotTrack == '1' || window.doNotTrack == '1')) {
 if (typeof ga === 'function') {
   ga('create', 'UA-68492200-1', 'auto');
   ga('require', 'GTM-MR5DMHT');
-  // ga('set', 'anonymizeIp', 1);
 }
