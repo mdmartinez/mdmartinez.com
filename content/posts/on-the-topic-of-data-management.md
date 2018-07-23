@@ -1,7 +1,7 @@
 ---
 title: On the Topic of Data Management
 date: 2018-07-21
-tags: ['data']
+tags: ['data','modern-data-management']
 ---
 
 I’ve worked in the area of data management for my entire career. I’ve become familiar with many of the business problems that tend to be data intensive, and the approaches people take to solve them. I use the term data management to refer to a mashup of data modeling, data warehousing, and data engineering.
