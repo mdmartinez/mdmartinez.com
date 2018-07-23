@@ -2,9 +2,13 @@
 title: About
 ---
 
-I'm Daniel, and this is my personal site.
+I’m a data practitioner trying to understand the world.
 
-I write about things that matter to me, and that I think others need to know.
+Professionally I’ve worn several hats, including data engineer, data warehouse architect, and data analyst.
+
+I have a strong passion for intuitive dataset design, crafting delightful interfaces, and creating data models that balance scalability and performance.
+
+I love connecting with interesting and energetic people. Reach out if you want to talk about data, technology, or are just a curious person.
 
 Welcome.
 
