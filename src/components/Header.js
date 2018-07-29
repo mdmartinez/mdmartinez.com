@@ -43,7 +43,7 @@ const Header = ({ location }) => {
   const pageStyle = isPost ? { ...headerStyles.post } : { ...headerStyles.default };
   return (
     <Row {...pageStyle}>
-      <Column mx={[0, null, '100px']} mb={0}>
+      <Column mb={0}>
         <Toolbar bg="transparent">
           <NavLink
             onClick={() => push('/')}
