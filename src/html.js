@@ -31,11 +31,11 @@ export default class HTML extends React.Component {
           {this.props.preBodyComponents}
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           {this.props.postBodyComponents}
-          <script type="text/javascript" async="true" src="js/seg.js" />
-          <script type="text/javascript" async="true" src="js/mp.js" />
-          <script type="text/javascript" async="true" src="js/am.js" />
+          {/* <script type="text/javascript" async="true" src="js/seg.js" /> */}
+          {/* <script type="text/javascript" async="true" src="js/mp.js" /> */}
+          {/* <script type="text/javascript" async="true" src="js/am.js" /> */}
           <script type="text/javascript" async="true" src="js/heap.js" />
-          <script type="text/javascript" async="true" src="js/gauge.js" />
+          {/* <script type="text/javascript" async="true" src="js/gauge.js" /> */}
           <script type="text/javascript" async="true" src="js/ins.js" />
           <script type="text/javascript" async="true" src="js/hj.js" />
           <script type="text/javascript" async="true" src="js/olark.js" />
