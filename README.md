@@ -4,12 +4,17 @@ This is the code for my personal site. If you are interested in running it local
 
 ## Install
 
-Make sure that you have the Gatsby CLI program installed:
+Make sure that you have the Gatsby CLI installed:
 ```sh
 npm install --global gatsby-cli
 ```
 
-Then you can run it by:
+Install the dependencies:
+```sh
+npm install
+```
+
+Change into the directory, and run the development server:
 ```sh
 cd mdmartinez.com
 gatsby develop
