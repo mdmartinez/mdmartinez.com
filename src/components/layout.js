@@ -37,8 +37,19 @@ class Layout extends React.Component {
               ]}
             />
             <Provider theme={theme}>
-              <Header siteTitle={data.site.siteMetadata.title} location={location} />
-              {children}
+              <div css={{ background: theme.colors.blueSaturationScale[0] }}>
+                <div
+                  css={{
+                    maxWidth: '1200px',
+                    margin: '0 auto',
+                    height: '100%',
+                    background: 'white',
+                    boxShadow: '0 0 8px rgba(0,0,0,0.3)',
+                  }}>
+                  <Header siteTitle={data.site.siteMetadata.title} location={location} />
+                  {children}
+                </div>
+              </div>
             </Provider>
           </Fragment>
         )}

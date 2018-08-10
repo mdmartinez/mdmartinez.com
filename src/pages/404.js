@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Flex, Container, Box, Text } from 'rebass/emotion';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 const NotFoundPage = ({ data, ...props }) => (
   <Layout location={props.location}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, push } from 'gatsby';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import { Row, Column, Container, Card, Heading } from 'rebass/emotion';
 import styled from 'react-emotion';
 import theme from '../theme';
@@ -25,7 +25,7 @@ const PostCard = styled(Card)({
 
 const IndexPage = ({ data, ...props }) => (
   <Layout location={props.location}>
-    <Row mt={4} mx={0}>
+    <Row mt={4} mx={0} css={{ height: '100vh' }}>
       <Column>
         <Container w={[13 / 14, theme.widths.default]}>
           {data.blogPosts.edges.map(({ blogPost }) => (

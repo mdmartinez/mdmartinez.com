@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Row, Column, Container, Box, Text } from 'rebass/emotion';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import theme from '../theme';
 import { chroma } from '../utils/style';
 
