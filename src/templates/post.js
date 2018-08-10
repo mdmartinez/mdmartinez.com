@@ -6,8 +6,8 @@ import MdArrowForward from 'react-icons/lib/md/arrow-forward';
 import MdArrowBack from 'react-icons/lib/md/arrow-back';
 import EmailCaptureForm from '../components/EmailCaptureForm';
 import Layout from '../components/layout';
-import style, { postTitleBGGradient, animatedUnderline } from '../utils/style';
-import { css } from 'react-emotion';
+import style, { postTitleBGGradient, animatedUnderline, underline } from '../utils/style';
+import { cx, css } from 'react-emotion';
 import theme from '../theme';
 
 const overflowAdjustment = css`
@@ -15,6 +15,23 @@ const overflowAdjustment = css`
     && {
       overflow-x: hidden;
     }
+  }
+`;
+
+const postStyle = css`
+  a {
+    text-decoration: none;
+    color: #262626;
+    border-bottom: 3px solid ${theme.colors.oranges[1]};
+    &:hover {
+      border-bottom: 3px solid ${theme.colors.blues[0]};
+    }
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+  blockquote {
+    border-left: 3px solid ${theme.colors.blueSaturationScale[3]};
   }
 `;
 
@@ -35,13 +52,13 @@ class Post extends React.Component {
       this.props.pageContext.next.fields &&
       this.props.pageContext.next.fields.slug &&
       this.props.pageContext.next;
-
     const postColumnStyle = {
       w: [1, '26em', '32em', '42em'],
       px: ['auto'],
       mx: ['auto'],
     };
     const excerpt = post.frontmatter.excerpt ? post.frontmatter.excerpt : post.excerpt;
+
     return (
       <Layout location={this.props.location}>
         <Helmet>
@@ -87,7 +104,7 @@ class Post extends React.Component {
                 maxWidth={['42em']}
                 fontSize={['17px', '17px', '17px', 3]}
                 lineHeight={'1.53'}
-                className={overflowAdjustment}
+                className={cx(overflowAdjustment, postStyle)}
                 css={{ color: theme.colors.grayScale[8] }}
                 dangerouslySetInnerHTML={{ __html: html }}
               />
