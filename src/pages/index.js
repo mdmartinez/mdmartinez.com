@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, push } from 'gatsby';
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import { Row, Column, Container, Card, Heading } from 'rebass/emotion';
 import styled from 'react-emotion';
 import theme from '../theme';

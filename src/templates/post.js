@@ -5,7 +5,7 @@ import { Row, Column, Container, Heading, Measure, Divider, Flex, Box, Link, Tex
 import MdArrowForward from 'react-icons/lib/md/arrow-forward';
 import MdArrowBack from 'react-icons/lib/md/arrow-back';
 import EmailCaptureForm from '../components/EmailCaptureForm';
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import style, { postTitleBGGradient, animatedUnderline } from '../utils/style';
 import { cx, css } from 'react-emotion';
 import theme from '../theme';
