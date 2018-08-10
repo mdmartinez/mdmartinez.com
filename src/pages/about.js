@@ -12,7 +12,7 @@ const containerBG = chroma(theme.colors.blueGrayScale[0])
 const About = ({ data, ...props }) => (
   <React.Fragment>
     <Layout location={props.location}>
-      <Row mt={4} mx={0}>
+      <Row mt={4} mx={0} css={{ height: '100vh' }}>
         <Column>
           <Container
             w={[7 / 8, theme.widths.default]}
