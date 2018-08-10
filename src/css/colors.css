@@ -44,6 +44,8 @@
 }
 
 .blue-saturation-scale {
+    /* #edf0f2 */
+    color: hsla(204, 16%, 94%, 1);
     /* #EBF4F7 */
     color: hsla(195, 43%, 95%, 1);
     /* #E1EAED */

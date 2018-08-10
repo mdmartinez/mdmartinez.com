@@ -40,6 +40,7 @@ const theme = {
       'hsla(3, 100%, 21%, 1)',
     ],
     blueSaturationScale: [
+      'hsla(204, 16%, 94%, 1)',
       'hsla(195, 43%, 95%, 1)',
       'hsla(195, 25%, 91%, 1)',
       'hsla(197, 26%, 66%, 1)',
