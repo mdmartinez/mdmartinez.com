@@ -80,7 +80,7 @@ class Post extends React.Component {
           <Column px={[2, 4]} css={{ label: 'top-left-column' }} />
           <Column {...postColumnStyle} my={0} css={{ label: 'top-mid-column' }}>
             <Container
-              w={[1, '26em', '32em', '48em']}
+              w={[1, '26em', '32em', '52em']}
               px={['auto']}
               mx={['auto']}
               css={{ label: 'top-mid-container' }}>
