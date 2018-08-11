@@ -3,12 +3,30 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { Row, Column, Container, Box, Text } from 'rebass/emotion';
 import Layout from '../components/layout';
+import { css } from 'react-emotion';
 import theme from '../theme';
 import { chroma } from '../utils/style';
 
 const containerBG = chroma(theme.colors.blueGrayScale[0])
   .alpha(0.8)
   .css('hsl');
+
+const aboutText = css`
+  a {
+    text-decoration: none;
+    color: #262626;
+    border-bottom: 3px solid ${theme.colors.oranges[1]};
+    &:hover {
+      border-bottom: 3px solid ${theme.colors.blues[0]};
+    }
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+  blockquote {
+    border-left: 3px solid ${theme.colors.blueSaturationScale[3]};
+  }
+`;
 
 const About = ({ data, ...props }) => (
   <React.Fragment>
@@ -20,7 +38,7 @@ const About = ({ data, ...props }) => (
         <Column>
           <Container
             w={[7 / 8, theme.widths.default]}
-            fontSize={[3, 4]}
+            fontSize={[3, 3]}
             css={{
               maxWidth: '28em',
               backgroundColor: containerBG,
@@ -28,7 +46,7 @@ const About = ({ data, ...props }) => (
               boxShadow: theme.shadows[3],
             }}>
             <Box py={3}>
-              <Text dangerouslySetInnerHTML={{ __html: data.aboutPage.html }} />
+              <Text className={aboutText} dangerouslySetInnerHTML={{ __html: data.aboutPage.html }} />
             </Box>
           </Container>
         </Column>
