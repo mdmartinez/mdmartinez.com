@@ -10,17 +10,18 @@ import '../css/prism-solarizedlight.css';
 import theme from '../theme';
 
 class Layout extends React.Component {
-  componentDidMount() {
+  UNSAFE_componentWillUnmount() {
     console.log('--componentMounted--');
-    document.addEventListener('onload', () => {
-      console.log('--document loaded--');
-      if (window.location.href.indexOf('about') >= 0) {
-        console.log('--about page--');
-        window.olark('api.box.show');
-      } else {
-        window.olark('api.box.hide');
-      }
-    });
+    this.updateOlark();
+  }
+
+  updateOlark() {
+    if (window.location.href.indexOf('about') >= 0) {
+      console.log('--about page--');
+      window.olark('api.box.show');
+    } else {
+      window.olark('api.box.hide');
+    }
   }
 
   render() {
