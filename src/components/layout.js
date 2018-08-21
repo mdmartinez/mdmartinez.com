@@ -10,7 +10,7 @@ import '../css/prism-solarizedlight.css';
 import theme from '../theme';
 
 class Layout extends React.Component {
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (window.location.href.indexOf('about') >= 0 && typeof window['olark'] !== 'undefined') {
       window.olark('api.box.show');
     } else {
