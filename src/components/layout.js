@@ -23,7 +23,6 @@ class Layout extends React.Component {
   render() {
     const { children, location } = this.props;
     const isPost = location.pathname.match(/^\/posts\//);
-    console.log(!!isPost);
     return (
       <StaticQuery
         query={graphql`
