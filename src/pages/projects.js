@@ -1,16 +1,11 @@
 import React from 'react';
-
-import { Row, Column, Container, Box, Text } from 'rebass/emotion';
+import { Row, Column, Container, Flex, Text } from 'rebass/emotion';
 import Layout from '../components/layout';
+import ScopanaLogo from '../components/ScopanaLogo';
 import { css } from 'react-emotion';
 import theme from '../theme';
-import { chroma } from '../utils/style';
 
-const containerBG = chroma(theme.colors.blueGrayScale[0])
-  .alpha(0.8)
-  .css('hsl');
-
-const aboutText = css`
+const textStyle = css`
   a {
     text-decoration: none;
     color: #262626;
@@ -32,18 +27,15 @@ const Projects = ({ data, ...props }) => (
     <Layout location={props.location}>
       <Row mt={4} mx={0} css={{ height: '100vh' }}>
         <Column>
-          <Container
-            w={[7 / 8, theme.widths.default]}
-            fontSize={[3, 3]}
-            css={{
-              maxWidth: '28em',
-              backgroundColor: containerBG,
-              borderRadius: theme.radii[2],
-              boxShadow: theme.shadows[3],
-            }}>
-            <Box py={3}>
-              <Text className={aboutText}>Some text could be written here as well.</Text>
-            </Box>
+          <Container w={[7 / 8, theme.widths.default]} fontSize={[3, 3]}>
+            <Flex flexDirection={'column'}>
+              <ScopanaLogo />
+              <Text ml={'12px'} mt={4} className={textStyle}>
+                I'm currently working on building a simpler way to explore data. Scopana is a tool for
+                computing over information. Whether that information comes from an API, an event stream, or a
+                static CSV on sitting on your desktop is completely up to you.
+              </Text>
+            </Flex>
           </Container>
         </Column>
       </Row>

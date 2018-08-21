@@ -11,10 +11,9 @@ import theme from '../theme';
 
 class Layout extends React.Component {
   componentDidMount() {
-    if (window.location.href.indexOf('about') >= 0) {
+    if (window.location.href.indexOf('about') >= 0 && typeof window['olark'] !== 'undefined') {
       window.olark('api.box.show');
     } else {
-      console.log('not about page');
       window.olark('api.box.hide');
     }
   }

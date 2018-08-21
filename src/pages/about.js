@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { Row, Column, Container, Box, Text } from 'rebass/emotion';
 import Layout from '../components/layout';
