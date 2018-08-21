@@ -22,5 +22,4 @@
   };
   k = y._ = { s: [], t: [+new Date()], c: {}, l: a };
 })(window, document, 'static.olark.com/jsclient/loader.js');
-/* custom configuration goes here (www.olark.com/documentation) */
 olark.identify('2444-458-10-7494');
