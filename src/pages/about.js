@@ -31,9 +31,6 @@ const aboutText = css`
 const About = ({ data, ...props }) => (
   <React.Fragment>
     <Layout location={props.location}>
-      <Helmet>
-        <script type="text/javascript" async="true" src="js/olark.js" />
-      </Helmet>
       <Row mt={4} mx={0} css={{ height: '100vh' }}>
         <Column>
           <Container

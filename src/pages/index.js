@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, push } from 'gatsby';
+import { graphql, navigate } from 'gatsby';
 import Layout from '../components/layout';
 import { Row, Column, Container, Card, Heading } from 'rebass/emotion';
 import styled from 'react-emotion';
@@ -35,7 +35,7 @@ const IndexPage = ({ data, ...props }) => (
               boxShadow={3}
               borderRadius={2}
               key={blogPost.id}
-              onClick={() => push(blogPost.fields.slug)}>
+              onClick={() => navigate(blogPost.fields.slug)}>
               <Heading
                 textAlign={'center'}
                 fontSize={[3, 4]}

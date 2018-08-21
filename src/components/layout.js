@@ -10,6 +10,15 @@ import '../css/prism-solarizedlight.css';
 import theme from '../theme';
 
 class Layout extends React.Component {
+  componentDidMount() {
+    if (window.location.href.indexOf('about') >= 0) {
+      window.olark('api.box.show');
+    } else {
+      console.log('not about page');
+      window.olark('api.box.hide');
+    }
+  }
+
   render() {
     const { children, location } = this.props;
     return (
