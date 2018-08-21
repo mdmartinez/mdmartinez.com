@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { Row, Column, Container, Flex, Text } from 'rebass/emotion';
 import Layout from '../components/layout';
 import ScopanaLogo from '../components/ScopanaLogo';
@@ -25,6 +26,7 @@ const textStyle = css`
 const Projects = ({ data, ...props }) => (
   <React.Fragment>
     <Layout location={props.location}>
+      <Helmet title={'Daniel Martinez - Projects'} />
       <Row mt={4} mx={0} css={{ height: '100vh' }}>
         <Column>
           <Container w={[7 / 8, theme.widths.default]} fontSize={[3, 3]}>

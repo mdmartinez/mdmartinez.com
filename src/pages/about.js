@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { Row, Column, Container, Box, Text } from 'rebass/emotion';
 import Layout from '../components/layout';
@@ -30,6 +31,7 @@ const aboutText = css`
 const About = ({ data, ...props }) => (
   <React.Fragment>
     <Layout location={props.location}>
+      <Helmet title={'Daniel Martinez - About'} />
       <Row mt={4} mx={0} css={{ height: '100vh' }}>
         <Column>
           <Container
