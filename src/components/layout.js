@@ -22,6 +22,8 @@ class Layout extends React.Component {
 
   render() {
     const { children, location } = this.props;
+    const isPost = location.pathname.match(/^\/posts\//);
+    console.log(!!isPost);
     return (
       <StaticQuery
         query={graphql`
@@ -52,7 +54,7 @@ class Layout extends React.Component {
                   css={{
                     maxWidth: '1200px',
                     margin: '0 auto',
-                    height: '100%',
+                    height: !!isPost ? 'initial' : '100vh',
                     background: 'white',
                     boxShadow: '0 0 8px rgba(0,0,0,0.3)',
                   }}>

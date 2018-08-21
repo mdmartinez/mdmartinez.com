@@ -25,7 +25,7 @@ const PostCard = styled(Card)({
 
 const IndexPage = ({ data, ...props }) => (
   <Layout location={props.location}>
-    <Row mt={4} mx={0} css={{ height: '100vh' }}>
+    <Row mt={4} mx={0}>
       <Column>
         <Container w={[13 / 14, theme.widths.default]}>
           {data.blogPosts.edges.map(({ blogPost }) => (

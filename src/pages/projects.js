@@ -27,7 +27,7 @@ const Projects = ({ data, ...props }) => (
   <React.Fragment>
     <Layout location={props.location}>
       <Helmet title={'Daniel Martinez - Projects'} />
-      <Row mt={4} mx={0} css={{ height: '100vh' }}>
+      <Row mt={4} mx={0}>
         <Column>
           <Container w={[7 / 8, theme.widths.default]} fontSize={[3, 3]}>
             <Flex flexDirection={'column'}>

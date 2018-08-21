@@ -32,7 +32,7 @@ const About = ({ data, ...props }) => (
   <React.Fragment>
     <Layout location={props.location}>
       <Helmet title={'Daniel Martinez - About'} />
-      <Row mt={4} mx={0} css={{ height: '100vh' }}>
+      <Row mt={4} mx={0}>
         <Column>
           <Container
             w={[7 / 8, theme.widths.default]}
