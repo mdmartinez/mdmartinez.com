@@ -23,6 +23,7 @@ export default class HTML extends React.Component {
           <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
+          <script type="text/javascript" src="js/olark.js" />
           <script type="text/javascript" async="true" src="js/ga.js" />
           <noscript>JavaScript must be enabled to view this site.</noscript>
           {this.props.headComponents}
@@ -38,7 +39,7 @@ export default class HTML extends React.Component {
           {/* <script type="text/javascript" async="true" src="js/gauge.js" /> */}
           <script type="text/javascript" async="true" src="js/ins.js" />
           <script type="text/javascript" async="true" src="js/hj.js" />
-          <script type="text/javascript" async="true" src="js/olark.js" />
+
           <script type="text/javascript" async="true" src="js/mtiFontTrackingCode.js" />
           <script type="text/javascript" src="js/register-sw.js" />
         </body>
