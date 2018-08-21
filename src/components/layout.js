@@ -17,7 +17,7 @@ class Layout extends React.Component {
       } else {
         window.olark('api.box.hide');
       }
-    }, 200);
+    }, 50);
   }
 
   render() {
