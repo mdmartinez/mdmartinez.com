@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { push } from 'gatsby';
+import { navigate } from 'gatsby';
 import { Row, Column, Toolbar, NavLink, Text } from 'rebass/emotion';
 import styled from 'react-emotion';
 import theme from '../theme';
@@ -39,6 +39,7 @@ const headerStyles = {
 
 const Header = ({ location }) => {
   const isAboutPage = location.pathname.match(/^\/about/);
+  const isProjectsPage = location.pathname.match(/^\/projects/);
   const isPost = location.pathname.match(/^\/posts\//);
   const pageStyle = isPost ? { ...headerStyles.post } : { ...headerStyles.default };
   return (
@@ -46,7 +47,7 @@ const Header = ({ location }) => {
       <Column mb={0}>
         <Toolbar bg="transparent">
           <NavLink
-            onClick={() => push('/')}
+            onClick={() => navigate('/')}
             pl={isPost ? [0, 4] : [4]}
             ml={isPost ? [-2, -3] : [-3]}
             color={theme.colors.blueGrayScale[8]}
@@ -55,8 +56,16 @@ const Header = ({ location }) => {
             Daniel Martinez
           </NavLink>
           <NavLink
-            onClick={() => push('/about')}
+            onClick={() => navigate('/projects')}
             ml="auto"
+            mr={isPost ? [-3, 0] : [-3, 0]}
+            fontSize={isPost ? [2, 4] : [3, 4]}>
+            <LinkText isActive={isProjectsPage} pt={isPost ? ['15px'] : ['15px', '20px']} pb={['5px']} px={1}>
+              Projects
+            </LinkText>
+          </NavLink>
+          <NavLink
+            onClick={() => navigate('/about')}
             mr={isPost ? [-3, 0] : [-3, 0]}
             fontSize={isPost ? [2, 4] : [3, 4]}>
             <LinkText isActive={isAboutPage} pt={isPost ? ['15px'] : ['15px', '20px']} pb={['5px']} px={1}>
