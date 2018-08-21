@@ -28,6 +28,7 @@ const postStyle = css`
     }
   }
   p {
+    color: hsla(0, 0%, 0%, 0.8);
     margin-bottom: 2rem;
   }
   blockquote {
