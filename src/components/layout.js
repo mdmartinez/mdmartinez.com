@@ -11,7 +11,6 @@ import theme from '../theme';
 
 class Layout extends React.Component {
   componentDidMount() {
-    console.log('--componentMounted--');
     window.setTimeout(() => {
       if (window.location.href.indexOf('about') >= 0) {
         window.olark('api.box.show');
