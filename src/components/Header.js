@@ -49,7 +49,7 @@ const Header = ({ location }) => {
           <NavLink
             onClick={() => navigate('/')}
             pl={isPost ? [0, 4] : [4]}
-            ml={isPost ? [-2, -3] : [-3]}
+            ml={isPost ? [-2, -3] : [-4, -3]}
             color={theme.colors.blueGrayScale[8]}
             css={{ fontFamily: theme.fonts.display }}
             fontSize={isPost ? [4, '40px', 6] : [5, '40px', 6]}>
