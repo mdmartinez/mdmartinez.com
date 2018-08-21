@@ -33,7 +33,7 @@ const Projects = ({ data, ...props }) => (
               <Text ml={'12px'} mt={4} className={textStyle}>
                 I'm currently working on building a simpler way to explore data. Scopana is a tool for
                 computing over information. Whether that information comes from an API, an event stream, or a
-                static CSV on sitting on your desktop is completely up to you.
+                static CSV that is sitting on your desktop is completely up to you.
               </Text>
             </Flex>
           </Container>
