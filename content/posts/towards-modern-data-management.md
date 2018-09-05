@@ -4,9 +4,9 @@ date: 2018-07-21
 tags: ['data','modern-data-management']
 ---
 
-My experience in data management started with SAS and Excel. A hybrid of automatic and manual processes taught me just how far you can go with creative problem-solving. I then managed data using the classic Microsoft stack. Many people have known this stack: SQL Server, SSIS, SSRS. It works, but not in the way that most people find desirable. Afterwards, I became familiar with optimizing one of the favorites in the startup world: Amazon Redshift, supported by a blend of SQL and Python.
+The act of programming becomes more enlightening with every additional environment you work in. My personal journey in data management began with SAS programming. I leaned how to effectively manage analytical pipelines and eventually got certified. Afterwards, I moved on to managing the classic Microsoft stack for a fast moving startup. Many people have known this stack: SQL Server, SSIS, SSRS. It works, but can leave something to be desired. I then went full cloud and learned to tune and optimize data pipelines on AWS - a transition that many companies are currently undergoing.
 
-What have I learned from all this? I’ve learned that any given individual’s technical knowledge is almost always missing that one poorly promoted corner of the world’s knowledge base. I’ve also learned that data management has relatively few approaches but relatively many options. Just learning the names of available solutions and their relationships is an exhausting exercise.
+What have I learned from all this? I’ve learned that any given individual’s technical knowledge can be incomplete in subtle but crucial ways. I’ve also learned that data management has relatively few approaches but relatively many options. Just learning the names of available solutions and their relationships is an exhausting exercise.
 
 ## The World Today
 
