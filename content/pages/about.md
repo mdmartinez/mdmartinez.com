@@ -2,7 +2,7 @@
 title: About
 ---
 
-I’m a data practitioner with six years of hands-on experience in a variety of environments.
+I’m a software engineer with six years of hands-on experience in a variety of environments.
 
 Professionally I’ve worn several hats, including data engineer, data warehouse architect, and data analyst.
 
